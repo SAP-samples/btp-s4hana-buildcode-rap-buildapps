@@ -11,9 +11,3 @@
 9. [Fill the test data](./fill-data/README.md)
 10. [Test the service](./test/README.md)
 
-
-**TODO**: 
-- Difference between trial and normal cloud
-- Github integration
-- Destination
-- Geo coordinates world distribution
