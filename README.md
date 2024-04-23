@@ -1,36 +1,60 @@
-# Mastering S/4HANA Extensions with SAP Build Code
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
-
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
+# Mastering SAP S/4HANA Extension with SAP Build Code with Joule, BTP ABAP and SAP Build
 
 ## Description
-<!-- Please include SEO-friendly description -->
+This scenario showcases the integration of a mobile app developed using SAP Build Apps with two backend services: SAP Build Code and Joule(CAP) and Restful ABAP Programming (RAP). The mobile app, created with a no-code approach, interacts seamlessly with CAP and RAP backends, offering advanced functionalities and data access.
 
-## Requirements
+![](./documentation/images/buildcode.png)
 
-## Download and Installation
+## Focus Topics 
 
-## Known Issues
-<!-- You may simply state "No known issues. -->
+The tutorial focus on building **Fusion Application** on where professional and citizen developers come together. The following aspects are:
+
+* Build and Deploy full stack application using [SAP Build Code with Joule](https://www.sap.com/india/products/technology-platform/developer-tools.html)
+
+![](./documentation/images/joule.png)
+
+* Build and Deploy full stack application using [SAP BTP ABAP Environment(RAP)](https://help.sap.com/docs/abap-cloud/abap-rap/abap-restful-application-programming-model).
+
+![](./documentation/images/rap.png)
+
+* Build and Deploy mobile application using [SAP Build](https://www.sap.com/products/technology-platform/low-code.html)
+
+![](./documentation/images/build.png)
+
+## Business Scenario
+
+![](./documentation/images/story.png)
+
+1. Suzan, a dedicated medical technician at SBA Medical clinic,, diligently inspected the vital equipment ensuring the highest standards of patient care. As she meticulously examined each device, her keen eye caught a minor glitch in one of the medical instruments.
+
+2. Without hesitation, Suzan reached for her trusted companion in the digital realm – the Service Hub mobile app. With swift taps on her smartphone screen, she raised an incident report detailing the issue encountered with the medical equipment.
+
+![](./documentation/images/servicehub.png)
+
+3. Meanwhile, in the heart of the digital infrastructure, the Cloud Application Programming (CAP) application, powered with Joule, seamlessly sprang into action. The incident reported by Suzan was swiftly captured and recorded within the CAP application, ensuring a centralized repository for all service-related matters.
+
+4. As the incident popped up on the radar of the Service Hub Admin, Alex, the seasoned service manager at Heath Tech Devices, took charge. With a few deft clicks within the Service Hub Admin interface, Alex assessed the incident, evaluated its priority level, and swiftly assigned a proficient processor to address the issue.
+
+![](./documentation/images/servicehubadmin.png)
+
+5. In the background, the robust Restful ABAP Programming (RAP) application, built using the Business Technology Platform (BTP) ABAP environment, came into play. Leveraging its capabilities, RAP seamlessly calculated the precise geographical location of the assigned processor by fetching latitude and longitude details from the CAP system.
+
+6. Armed with this vital geo-location information, Suzan could now track the progress of the assigned processor in real-time. With a sense of reassurance, she monitored the processor's journey and estimated arrival time, ensuring minimal disruption to the clinic's operations.
+
+## Where to Start?
+
+* Follow the below steps for quick start or start the [SAP Discovery Center Mission](https://discovery-center.cloud.sap/missions).
+
+    |  **Step**  |  **Description** | 
+    | ----------- | ----------- | 
+    | **Step 1**: [SAP Build Code with Joule](./documentation/SAP%20Build%20Code/Readme.md) | Build and Deplot Full Stack CAP Application on Cloud Foundry using Ai Enabled Joule |
+    | **Step 2**: [RESTful ABAP Service](./documentation/rap/README.md) | Build and Deploy Full Stack Resul ABAP Application | 
+    | **Step 3**: [SAP Build Apps](./documentation/buildapps/Readme.md)  | Configure SAP Build Apps and create mobile application |
+    | **Step 4**: [Test End to End Setup](./documentation/deploy/README.md)| Develop and Deploy CAP Application and integrate Application with SAP Build Work Zone, Standard Edition |
+
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+[Create an issue](https://github.com/SAP-samples/btp-s4hana-buildcode-rap-buildapps/issues/new) in this repository if you find a bug or have questions about the content.
  
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
