@@ -1,23 +1,27 @@
 # Mastering SAP S/4HANA Extension with SAP Build Code with Joule, BTP ABAP and SAP Build
 
 ## Description
-This scenario showcases the integration of a mobile app developed using SAP Build Apps with two backend services: SAP Build Code and Joule(CAP) and Restful ABAP Programming (RAP). The mobile app, created with a no-code approach, interacts seamlessly with CAP and RAP backends, offering advanced functionalities and data access.
+This scenario showcases the integration of a mobile app developed using SAP Build Apps with two backend services: SAP Build Code with Joule(CAP) and Restful ABAP Programming(RAP). The mobile app, created with a no-code approach, interacts seamlessly with CAP and RAP backends service, offering advanced functionalities and data access.
 
 ![](./documentation/images/buildcode.png)
+
+## Solution Diagram
+
+![](./documentation/images/solution-diagram.png)
 
 ## Focus Topics 
 
 The tutorial focus on building **Fusion Application** on where professional and citizen developers come together. The following aspects are:
 
-* Build and Deploy full stack application using [SAP Build Code with Joule](https://www.sap.com/india/products/technology-platform/developer-tools.html)
+1. Build and Deploy full stack application using [SAP Build Code with Joule](https://www.sap.com/india/products/technology-platform/developer-tools.html)
 
 ![](./documentation/images/joule.png)
 
-* Build and Deploy full stack application using [SAP BTP ABAP Environment(RAP)](https://help.sap.com/docs/abap-cloud/abap-rap/abap-restful-application-programming-model).
+2. Build and Deploy full stack application using [SAP BTP ABAP Environment(RAP)](https://help.sap.com/docs/abap-cloud/abap-rap/abap-restful-application-programming-model).
 
 ![](./documentation/images/rap.png)
 
-* Build and Deploy mobile application using [SAP Build](https://www.sap.com/products/technology-platform/low-code.html)
+3. Build and Deploy mobile application using [SAP Build](https://www.sap.com/products/technology-platform/low-code.html)
 
 ![](./documentation/images/build.png)
 
@@ -43,14 +47,16 @@ The tutorial focus on building **Fusion Application** on where professional and 
 
 ## Where to Start?
 
-* Follow the below steps for quick start or start the [SAP Discovery Center Mission](https://discovery-center.cloud.sap/missions).
+* Follow the below steps for quick start.
 
     |  **Step**  |  **Description** | 
     | ----------- | ----------- | 
-    | **Step 1**: [SAP Build Code with Joule](./documentation/SAP%20Build%20Code/Readme.md) | Build and Deplot Full Stack CAP Application on Cloud Foundry using Ai Enabled Joule |
-    | **Step 2**: [RESTful ABAP Service](./documentation/rap/README.md) | Build and Deploy Full Stack Resul ABAP Application | 
-    | **Step 3**: [SAP Build Apps](./documentation/buildapps/Readme.md)  | Configure SAP Build Apps and create mobile application |
-    | **Step 4**: [Test End to End Setup](./documentation/deploy/README.md)| Develop and Deploy CAP Application and integrate Application with SAP Build Work Zone, Standard Edition |
+    | **Step 1**: [SAP Build Code with Joule](./documentation/buildcode/Readme.md) | Build and Deploy Full Stack CAP Application on Cloud Foundry using Ai Enabled Joule |
+    | **Step 2**: [RESTful ABAP Service](./documentation/rap/README.md) | Build and Deploy Full Stack Restful ABAP Application | 
+    | **Step 3**: [Integration](./documentation/integration/README.md)  | Configure SAP BTP Destination for CAP and RAP Service |
+    | **Step 4**: [SAP Build Apps](./documentation/buildapps/Readme.md)  | Configure SAP Build Apps and create mobile application |
+    | **Step 5**: [Test Service Hub](./documentation/deploy/README.md)| Create a new incident using **Service Hub** Application |
+    | **Step 6**: [Test Service Hub Admin](./documentation/deploy/README.md)| Get the incidents created from Service Hub, assign the processor, update the priority and status using **Service Hub Admin** Application |
 
 
 ## How to obtain support

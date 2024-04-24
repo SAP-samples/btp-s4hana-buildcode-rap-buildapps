@@ -22,4 +22,4 @@
 
 
 
-**[Next Module 3 - Unit 2: Service Hub Admin App](/documentation/SAP%20Build%20Apps/Service%20Hub%20Admin%20App/Readme.md) >**
+**[Next Module 3 - Unit 2: Service Hub Admin App](/documentation/buildapps/Service%20Hub%20Admin%20App/Readme.md) >**
