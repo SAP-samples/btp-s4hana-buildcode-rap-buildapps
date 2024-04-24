@@ -33,13 +33,13 @@ The tutorial focus on building **Fusion Application** on where professional and 
 
 2. Without hesitation, Suzan reached for her trusted companion in the digital realm – the Service Hub mobile app. With swift taps on her smartphone screen, she raised an incident report detailing the issue encountered with the medical equipment.
 
-![](./documentation/images/servicehub.png)
+![](./documentation/images/servicehubadmin.png)
 
 3. Meanwhile, in the heart of the digital infrastructure, the Cloud Application Programming (CAP) application, powered with Joule, seamlessly sprang into action. The incident reported by Suzan was swiftly captured and recorded within the CAP application, ensuring a centralized repository for all service-related matters.
 
 4. As the incident popped up on the radar of the Service Hub Admin, Alex, the seasoned service manager at Heath Tech Devices, took charge. With a few deft clicks within the Service Hub Admin interface, Alex assessed the incident, evaluated its priority level, and swiftly assigned a proficient processor to address the issue.
 
-![](./documentation/images/servicehubadmin.png)
+![](./documentation/images/servicehub.png)
 
 5. In the background, the robust Restful ABAP Programming (RAP) application, built using the Business Technology Platform (BTP) ABAP environment, came into play. Leveraging its capabilities, RAP seamlessly calculated the precise geographical location of the assigned processor by fetching latitude and longitude details from the CAP system.
 
