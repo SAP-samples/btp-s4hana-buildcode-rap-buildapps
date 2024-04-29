@@ -10,7 +10,7 @@ You have an SAP BTP Trial account.
 
 2. In the navigation pane, click **Boosters** and Search for **SAP Build Code**.
 
-![](./imagesfindbooster.png)
+![](./images/findbooster.png)
 
 > There is a booster for each of the SAP Build Code service plans. Make sure to select the one relevant to the plan you want to work in.
 
