@@ -7,6 +7,6 @@
 4. [Enhance the Sample Data Using Joule](./sampledata/README.md)
 5. [Create Application Logic with Joule](./applogic/README.md)
 6. [Adapt the Service Domain](./service/README.md)
-7. [Test Service locally](./localtest/README.md)
-7. [Deploy the application using Single-Click Deployment](./deploy/README.md)
+7. [Add UI to the Application](./ui/README.md)
+8. [Deploy the application using single click deployment](./deploy/README.md)
 

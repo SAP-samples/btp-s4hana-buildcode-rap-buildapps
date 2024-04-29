@@ -10,32 +10,32 @@ You have an SAP BTP Trial account.
 
 2. In the navigation pane, click **Boosters** and Search for **SAP Build Code**.
 
-[](./imagesfindbooster.png)
+![](./imagesfindbooster.png)
 
 > There is a booster for each of the SAP Build Code service plans. Make sure to select the one relevant to the plan you want to work in.
 
 3. Open the booster to see the overview, components, and additional resources, and click **Start**.
 
-[](./images/startbooster.png)
+![](./images/startbooster.png)
 
 > The booster checks for required authorizations, compatible providers, and regions, as prerequisites for successful execution.
 
 4. After running the booster, in the popup window, click **Navigate to Subaccount**.
 
-[](./images/navigate.png)
+![](./images/navigate.png)
 
 ## Verify Subscription
 
 1. From the navigation pane, select **Services > Instances and Subscriptions**.
 
-[](./images/instance.png)
+![](./images/instance.png)
 
 2. Make sure you are subscribed to SAP Business Application Studio and to SAP Build Code.
 
-[](./images/subscription.png)
+![](./images/subscription.png)
 
 3. Click **SAP Build Code**. The SAP Build lobby opens.
 
-[](./images/lobby.png)
+![](./images/lobby.png)
 
 [Next: Introduction and Create Project](../intro/README.md)

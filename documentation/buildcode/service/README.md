@@ -57,6 +57,6 @@ This will project a conversation entity and establish a composition relationship
 
 ![](./images/finalconversation.png)
 
-[Next: Test Service locally](../localtest/README.md)
+[Next: Add UI to the Incident Management Application](../deploy/README.md)
 
 
