@@ -24,3 +24,5 @@ Repeat the whole steps for **Urgency** model as well. The final look of schema f
 
 ![](./images/both.png)
 
+[Next: Enhance the Sample Data Using Joule](../sampledata/README.md)
+

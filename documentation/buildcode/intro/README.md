@@ -34,7 +34,7 @@ SAP Build Code is a turnkey development environment that combines runtime and de
 5. Click the Full-Stack Application tile. 
 ![](./images/fullstack.png) 
 
-6. Enter a name for your project.
+6. In name field of your project, enter **incidentmanagement**.
 
 7. Select the dev space where you want the project to reside.
 
@@ -47,4 +47,6 @@ SAP Build Code is a turnkey development environment that combines runtime and de
 ![](./images/projectopen.png)
 
 The project opens in SAP Business Application Studio, the SAP Build Code development environment.
+
+[Next: Create Data Entities with Joule](../dataentity/README.md)
 

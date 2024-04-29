@@ -10,7 +10,7 @@ Joule created the CAP data model and the OData service. In addition, Joule creat
 
 ![](./images/openjoule.png)
 
-3. Accept the generated sample data.This will add the data in all entity.
+3. Accept the default prompt **generated sample data**.This will add the data in all entity.
 
 ![](./images/acceptdata.png)
 
@@ -18,14 +18,16 @@ Joule created the CAP data model and the OData service. In addition, Joule creat
 
 ![](./images/medical.png)
 
-5. Modify the Status **Code** by refering below screenshot.
+5. Modify the Status **Code** and **Description** by refering below screenshot.
 
 ![](./images/adaptstatuscode.png)
 
-6. Modify the Urgency **Code** by refering below screenshot.
+6. Modify the Urgency **Code** and **Description** by refering below screenshot.
 
 ![](./images/adapturgency.png)
 
 7. Modify the Incident Status and Urgency **Code** by refering below screenshot.
 
 ![](./images/adaptincident.png)
+
+[Next: Create Application Logic with Joule](../applogic/README.md)

@@ -33,3 +33,5 @@ Once you accept the code, you will see the update on the right side in the Story
 
 > **Tip**: To open the Storyboard, navigate to the **Project Explorer**, expand your project, and select **Storyboard**.
 
+ [Next Adapt Schema with Graphical Modeler](../changes/README.md)
+

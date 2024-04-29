@@ -14,7 +14,7 @@ We already have created the data model, service, and sample data with Joule. Now
 
 ![](./images/createlogic.png)
 
-4. In the **Phase** section, select **Before**. In the **Standard Event** section, select **Update**. That means that this logic will be automatically executed before the OData update operation is requested.
+4. In the **Phase** section, choose **Before**. In the **Standard Event** section, choose **Update**. That means that this logic will be automatically executed before the OData update operation is requested.
 
 ![](./images/addhandler.png)
 
@@ -45,11 +45,11 @@ write a validation , that if someone try to update the incident with status with
 ![](./images/clicklogic.png)
 
 
-12. In the **Add Application Logic** dialog, enter **Name** as **incidents-criticality-logic** and choose **Add**.
+12. In the **Add Application Logic** dialog, enter **Name** as **incidents-status-logic** and choose **Add**.
 
 ![](./images/addlogicritical.png)
 
-13. In the **Phase** section, select **Before**. In the **Standard Event** section, select **Create**. That means that this logic will be automatically executed before the OData create operation is requested.
+13. In the **Phase** section, choose **Before**. In the **Standard Event** section, choose **Create**. That means that this logic will be automatically executed before the OData create operation is requested.
 
 ![](./images/addhandlercritical.png)
 
@@ -66,6 +66,8 @@ Always assign the Status code value to 'N' before creating new incident
 15. Accept the Code.
 
 ![](./images/addhandlerstatus.png)
+
+[Next: Adapt the Service Domain](../service/README.md)
 
 
 

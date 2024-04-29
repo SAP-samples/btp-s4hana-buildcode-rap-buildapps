@@ -18,7 +18,9 @@ The last step in SAP Build Code is to deploy the application to Cloud Foundry. T
 
 ![](./images/cflogin.png)
 
-5. After the successful deployment you will find the link of the deployed application in the terminal. Use Ctrl+click to try it out!
+5. After the successful deployment you will find the link of the deployed application in the terminal. copy the link to try it out!
+
+![](./images/deployedapp.png)
 
 
 
