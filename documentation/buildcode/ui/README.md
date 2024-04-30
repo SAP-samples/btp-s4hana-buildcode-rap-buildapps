@@ -42,3 +42,5 @@ To display and test the content we created for the incident management program, 
 
 ![](./images/medical.png)
 
+[Next: Deploy the Application Using One Click Deployment](../deploy/README.md)
+
