@@ -118,9 +118,9 @@ CLASS ZCL_GEO_HELPER IMPLEMENTATION.
     USING zbupageo.
 
     et_partners = SELECT partner AS Partner,
-                          location.ST_Distance( NEW ST_Point(iv_longitude, iv_latitude).ST_SRID( 4326 ) ) as Distance
+                          location.ST_Distance( NEW ST_Point(iv_longitude, iv_latitude).ST_SRID( 4326 ) ) / 1000 as Distance
                    FROM zbupageo
-                   WHERE location.ST_Distance( NEW ST_Point(iv_longitude, iv_latitude).ST_SRID( 4326 ) ) <= iv_radius
+                   WHERE location.ST_Distance( NEW ST_Point(iv_longitude, iv_latitude).ST_SRID( 4326 ) ) <= ( iv_radius * 1000 )
                    ORDER BY Distance;
   ENDMETHOD.
 ENDCLASS.

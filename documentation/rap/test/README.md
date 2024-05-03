@@ -8,29 +8,35 @@ In this exercise, you will test the RESTful ABAP service.
 
 ### Task 1: Test the service
 
-1. In the new browser tab paste the URL copied in the [previous exercise](./arrangement.md).
+1. Open your service binding **ZAPI_GEO_O2**
 
-2. When credentials will be requested enter the following data:
-  - **DEVEXT_WORKSHOPER** in the field **Username**
-  - Password provided by the workshop host in the field **Password**
+2. Select **Service URL** link to open the service API in browser.
 
-  ![Alt text](img/0430-credentials-request-on-test.png) 
+  ![Service URL](img/service-url.png)
 
-3. You should see the list of entities as a response. Now change the URL by adding the following text (consider to replace **{YOUR_ID}**) and then press **Enter**:
+3. Login when promted. You should see a service metadata in your new browser window.
+
+  ![Metadata](img/service-metadata.png)
+
+4. Now change the URL by adding the following text right after the service ID **ZAPI_GEO_O2**. You should see 3 partners data including the geo coordinates.
 
 ~~~url
-A_EnterpriseProject/$expand=*&filter=Project eq 'PRA-{YOUR_ID}'
+/BusinessPartner?$expand=to_GeoData&$top=3
 ~~~
 
-  ![Alt text](img/0440-api-url-change.png) 
+  ![Response](img/partner-list-example.png) 
 
-4. The response should look similar to the following (including **_ProcessingStatus** and **_ProfileCode** associations):
+5. Now change the URL by adding the following text right after the service ID **ZAPI_GEO_O2**. This will call **Get In Radius** function to show all the partners in radius 500 km around *Walldorf, Germany* (defined by geo coordinates). Make sure that your response is not empty and contains distance (in kilometers) for every found partner.
 
-  ![Alt text](img/0450-test-response.png)
+~~~url
+/getInRadius?radius=500&point_lat='49.2896256'&point_lon='8.6409216'
+~~~
+
+  ![Response 2](img/get-in-radius.png)
 
 ## Result
 
-You have tested your service and verified that all the necessary additional entities (which previously were separate APIs) are available now with only one request. 
+You have tested your service and verified that it provides a partner list with expanded entities and can perform the function **Get In Radius**.
 
 ## Further reading / Reference Links
 
