@@ -2,15 +2,79 @@
 
 ## Introduction 
 
-We will fill the data not to the tables directly, but we will use the business object to garantee the data consistency (remember internal geo coordinates representation!).
+In this chapter we will prepare the test data by creating a console class. Note that we will fill the data not to the tables directly, but we will use the business object to garantee the data consistency (remember internal geo coordinates representation!).
+
+The business partner data will be taken from the S/4HANA Cloud Sandbox provided by **SAP Business Accelerator Hub**. You can use the same approach later to integrate your S/4HANA Cloud instance.
+
+The geo data will be taken from the list of the biggest cities in the world for every country (open data set). Later it's assumed that the geo data comes from special app (not covered yet in this tutorial).
 
 ## Content
 
-### Task 1: Create service consumption model
+### Task 1: Get API metadata
 
-Service consumption model: ZBUPA_CLOUD
+1. Open **SAP Business Accelerator Hub** in your browser following [this link](api.sap.com).
 
-### Task 2: Create filler class
+2. Select **Login** button and log in with your SAP credentials.
+
+  ![login](img/hub-login.png)
+
+3. Enter **business partners** in the search field and then press **Enter**.
+
+  ![Search](img/hub-bupa-search.png)
+
+4. Select **Business Partners** API for **SAP S/4HANA**. You can use filter on the left side to restrict your search.
+
+  ![API](img/bupa-api.png)
+
+5. Select **API Specification** tab and then choose **Download** button in the **EDMX** section.
+
+  ![Download EDMX](img/download-edmx.png)
+
+6. Additionally select **Show API Key** button and then select **Copy Key and Close** in the popup window. Note the copied key somewhere to use later.
+
+  ![Copy API key](img/copy-api-key.png)
+
+### Task 2: Create a service consumption model
+
+1. Right click on your package name created in the previous exercise.
+
+2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+
+  ![New Object](../common-images/new-object.png) 
+
+3. Choose **Service Consumption Model** in the **Business Services** folder and then choose **Next**.
+
+  ![New object type](img/new-consumption-model.png)
+
+4. Enter the following data and then choose **Next** button:
+
+  - **ZBUPA_CLOUD** in the **Name** field
+  - **Consume Business Partner API** in the **Description** field
+  - **OData** in the **Remote Consumption Mode** field
+
+  ![Object data](img/consupmtion-model-details.png) 
+
+5. On the next screen select **Browse..** button and then select your EDMX file saved in the previous task.
+
+6. Enter **ZBUPA_CLOUD** in the **Class Name** field and choose **Next**.
+
+  ![Class name](img/consumption-class-name.png)
+
+7. On the next screen **Components of OData Service** just choose **Next**.
+
+8. On the next screen **ETag Support** just choose **Next**.
+
+9. On the next screen select your transport (if applicable) and choose **Finish**.
+
+10. Generation of the service consumption class will take some time. After it's finished choose **Activate** button.
+   
+  ![Activate](../common-images/activate-button.png)
+
+
+
+### Task 3: Create a console class
+
+> NOTE: You can ommit the steps from 1 to 8 if you cloned your code from GIT repository before.
 
 1. Right click on your package name created in the previous exercise.
 
@@ -35,9 +99,9 @@ Service consumption model: ZBUPA_CLOUD
 
 6. Choose **Next** button.
 
-5. On the next screen select your transport (if applicable) and choose **Finish**.
+7. On the next screen select your transport (if applicable) and choose **Finish**.
 
-6. Replace the code of the class with the one below:
+8. Replace the code of the class with the one below:
 
 ~~~abap
 CLASS zcl_fill_bupa_tables DEFINITION
@@ -68,7 +132,7 @@ CLASS ZCL_FILL_BUPA_TABLES IMPLEMENTATION.
                         i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
 
         lo_http_client->get_http_request( )->set_header_fields( VALUE #(
-             (  name = 'APIKey' value = 'sIaDy4xGGgh5DpinJWEAqZt5FSWu5UGa' ) ) ).
+             (  name = 'APIKey' value = '{YOUR_API_KEY}' ) ) ).
 
         DATA(lo_client_proxy) = /iwbep/cl_cp_factory_remote=>create_v2_remote_proxy(
           EXPORTING
@@ -181,23 +245,30 @@ CLASS ZCL_FILL_BUPA_TABLES IMPLEMENTATION.
 ENDCLASS.
 ~~~
 
-7. Choose **Activate** button.
+8. In the line 29 replace **{YOUR_API_KEY}** with the API key that you've got before in the Task 1.
+
+  ![Paste API Key](img/paste_api_key.png)
+
+9. Choose **Activate** button.
    
   ![Activate](../common-images/activate-button.png)
 
 
-### Task 3: Fill the data
+### Task 4: Fill the data
 
-1. Right click on the class **ZCL_FILL_BUPA_TABLES**.
+1. Right-click your class **ZCL_FILL_BUPA_TABLES** and select **Run As** &rarr; **ABAP Application (Console)** or select your class and press **F9**.
 
-2. Select **Run As..** &rarr; **ABAP Application (Console)** in the context menu.
+  ![Run](img/run.png)
 
-  ![Run](img/???)
-
-3. You should see the following log:
+2. You should see the following log:
 
 ~~~
-Successfully!
+Getting partners from S/4HANA Cloud...
+Found partners: 50
+Starting to fill the test data...
+Clearing the tables...
+Adding the data...
+Finished.
 ~~~
 
 
@@ -209,3 +280,4 @@ You have successfully filled the database tables with the test data. Now you can
 
 ## Further reading / Reference Links
 
+- [Create Your First ABAP Console Application](https://developers.sap.com/tutorials/abap-environment-console-application.html)
