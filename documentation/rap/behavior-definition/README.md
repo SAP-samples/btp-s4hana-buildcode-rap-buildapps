@@ -106,14 +106,31 @@ define abstract entity ZD_GETINRADIUS_RESULT
 
 ### Task 3: Create behavior definition
 
+1. Right click on your main CDS view **ZI_BUSINESSPARTNER**.
+
+2. Choose **New Behavior Definition** in the popup menu.
+
+  ![New object](img/new-behavior-definition.png)
+
+3. Enter the following data and then choose **Next**:
+
+  - **Business Partners** in the **Description** field
+  - **Managed** in the **Implementation Type**
+
+  ![Details](img/definition-details.png) 
+
+4. On the next screen select your transport and choose **Finish**.
+
+5. Replace the code of the behavior definition with the one below:
+
+~~~abap
 managed implementation in class zbp_i_businesspartner unique;
 strict ( 2 );
 
-define behavior for ZI_BusinessPartner //alias <alias_name>
+define behavior for ZI_BusinessPartner
 persistent table zbupa
 lock master
 authorization master ( instance )
-//etag master <field_name>
 {
   static function getInRadius
     parameter ZD_GEO_PARAMETERS
@@ -134,18 +151,17 @@ authorization master ( instance )
 
 }
 
-define behavior for ZI_BusinessPartnerGeo //alias <alias_name>
-persistent table zgeo
+define behavior for ZI_BusinessPartnerGeo
+persistent table zbupageo
 lock dependent by _BusinessPartner
 authorization dependent by _BusinessPartner
-//etag master <field_name>
 {
   update;
   delete;
   field ( readonly ) Partner;
   association _BusinessPartner;
 
-  mapping for ZGEO {
+  mapping for zbupageo {
     Partner = partner;
     Latitude = latitude;
     Longitude = longitude;
@@ -154,10 +170,33 @@ authorization dependent by _BusinessPartner
 
   determination setGEOPoint on modify {create; field Latitude, Longitude; }
 }
+~~~
+
+6. Choose **Activate** button.
+   
+  ![Activate](../common-images/activate-button.png)
 
 
 
 ### Task 4: Create behavior implementation
+
+1. Put your cursor on **zbp_i_businesspartner** class in the code of your behavior definition.
+
+2. Press **Ctrl+1** (or select **Quick Fix** option from the context menu after a right click)
+
+3. Choose **Create behavior implementation class zbp_i_businesspartner** option in the popup menu.
+
+  ![Quick Fix](img/quick-fix.png)
+
+4. Enter the following data and then choose **Next**:
+
+  - **Behavior Implementation for ZI_BUSINESSPARTNER** in the **Description** field
+
+  ![Details](img/implementation-details.png) 
+
+5. On the next screen select your transport and choose **Finish**.
+
+6. Replace the code of the behavior definition with the one below:
 
 ~~~abap
 CLASS lhc_ZI_BusinessPartner DEFINITION INHERITING FROM cl_abap_behavior_handler.
@@ -257,14 +296,35 @@ ENDCLASS.
 
 > We use EML in the method implementation part. The Entity Manipulation Language (EML) is a part of the ABAP language that enables access to RAP business objects. 
 
+7. Choose **Activate** button.
+   
+  ![Activate](../common-images/activate-button.png)
+
 
 ### Task 5: Create projection for behavior definition
+
+1. Right click on your main CDS projection view **ZC_BUSINESSPARTNER**.
+
+2. Choose **New Behavior Definition** in the popup menu.
+
+  ![New object](img/new-behavior-definition-projection.png)
+
+3. Enter the following data and then choose **Next**:
+
+  - **Business Partners - Projection** in the **Description** field
+  - **Projection** in the **Implementation Type**
+
+  ![Details](img/definition-projection-details.png) 
+
+4. On the next screen select your transport and choose **Finish**.
+
+5. Replace the code of the behavior definition with the one below:
 
 ~~~abap
 projection;
 strict ( 2 );
 
-define behavior for ZC_BusinessPartner //alias <alias_name>
+define behavior for ZC_BusinessPartner
 {
   use create;
   use update;
@@ -275,7 +335,7 @@ define behavior for ZC_BusinessPartner //alias <alias_name>
   use association _GeoData { create; }
 }
 
-define behavior for ZC_BusinessPartnerGeo //alias <alias_name>
+define behavior for ZC_BusinessPartnerGeo
 {
   use update;
   use delete;
@@ -283,6 +343,10 @@ define behavior for ZC_BusinessPartnerGeo //alias <alias_name>
   use association _BusinessPartner;
 }
 ~~~
+
+6. Choose **Activate** button.
+   
+  ![Activate](../common-images/activate-button.png)
 
 
 ## Result
