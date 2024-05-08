@@ -1,16 +1,22 @@
-ZGEO
+# Introduction
 
-tell about transports management
+To store and group the development objects for your API you need to create an ABAP package. Optionally you can get all the objects from a provided GIT repository and save some time for this tutorial. But we will recommend to go through all the steps for better understanding of API creation.
 
-https://developers.sap.com/tutorials/abap-dev-create-package.html
+# Task 1: Create package
 
-GitHub is here
+To create a package follow this [guide](https://developers.sap.com/tutorials/abap-dev-create-package.html). Use **ZGEO** as a name of the package.
+
+# Task 2 \[OPTIONAL\]: Clone the repository
+
+------------- ToDo --------------
 
 ## Result
 
-You have created a business object. This object could be now ready to be exposed as a service. But we will add projection layer for more flexibility in future.
+You have created a package to store all other artifacts.
 
 [Next Tutorial: Create database tables](../tables/README.md)
 
 ## Further reading / Reference Links
 
+- [ABAP Packages](https://help.sap.com/docs/ABAP_PLATFORM/c238d694b825421f940829321ffa326a/4ec14bab6e391014adc9fffe4e204223.html)
+- [Working with abapGit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)
