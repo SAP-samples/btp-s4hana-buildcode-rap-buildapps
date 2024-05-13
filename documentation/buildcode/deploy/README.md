@@ -2,6 +2,10 @@
 
 The last step in SAP Build Code is to deploy the application to Cloud Foundry. This includes also that destinations are created automatically that the ODATA services can be consumed also by other tools like SAP Build Apps.
 
+## Prerequisites
+
+You should have a HANA Cloud instance in your subaccount. Please follow [this tutorial](https://developers.sap.com/tutorials/btp-app-hana-cloud-setup.html#3b20e31c-e9eb-44f7-98ed-ceabfd9e586e) if you don't have one yet.
+
 ## 1. Deploy the Application.
 
 1. For the deployment go to **Task Explorer** .
