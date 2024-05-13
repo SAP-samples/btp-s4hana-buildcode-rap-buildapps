@@ -23,7 +23,7 @@
 
 6.  Download the template application and save it to your PC
 
-![Project File](./Service%20Hub%20Client_UI%20Template.zip.gpg)
+  [Project File](./Service%20Hub%20Client_UI%20Template.zip.gpg)
 
 7. Click on the 3 dots on the top-right corner and select Replace
 
