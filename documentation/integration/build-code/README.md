@@ -3,7 +3,7 @@
 1. Login to your SAP BTP subaccount where you are going to develop application using **SAP Build Apps**.
 2. Create a new Destination
    1. Open the Connectivity entry and select Destination
-   2. Choose **New Destination**
+   2. Choose **Create Destination**
 
 3. Setup Destination - enter the following values
 
