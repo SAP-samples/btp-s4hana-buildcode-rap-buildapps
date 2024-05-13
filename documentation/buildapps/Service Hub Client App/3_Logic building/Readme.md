@@ -99,7 +99,7 @@ NOW()
 22. Paste the formula below and save it. This formula gets the longitude data that Build Apps stores in the sensor variables.
 
 ~~~
-STRING(sensorVars.geolocation.latestValue.latitude)
+STRING(sensorVars.geolocation.latestValue.longitude)
 ~~~
 
 ![](../screenshots/Picture47.png)
