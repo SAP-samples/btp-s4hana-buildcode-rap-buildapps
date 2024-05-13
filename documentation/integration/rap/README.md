@@ -33,7 +33,7 @@ This tutorial shows how to connect to the ABAP environment that resides in the t
 2. Create a new Destination
 
    - Open the Connectivity entry and select Destination
-   - Choose **New Destination**
+   - Choose **Create Destination**
 
 3. Setup Destination - enter the following values
 
