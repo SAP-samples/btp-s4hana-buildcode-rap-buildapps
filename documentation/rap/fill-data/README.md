@@ -104,6 +104,9 @@ The geo data will be taken from the list of the biggest cities in the world for 
 8. Replace the code of the class with the one below:
 
 <details>
+  
+  <summary>Expand to see the code...</summary>
+  
 ~~~abap
 CLASS zcl_fill_bupa_tables DEFINITION
   PUBLIC
@@ -728,13 +731,14 @@ CLASS zcl_fill_bupa_tables IMPLEMENTATION.
   ENDMETHOD.
 ENDCLASS.
 ~~~
+
 </details>
 
-8. In the line 29 replace **{YOUR_API_KEY}** with the API key that you've got before in the Task 1.
+9. In the line 44 replace **{YOUR_API_KEY}** with the API key that you've got before in the Task 1.
 
   ![Paste API Key](img/paste_api_key.png)
 
-9. Choose **Activate** button.
+10. Choose **Activate** button.
    
   ![Activate](../common-images/activate-button.png)
 
