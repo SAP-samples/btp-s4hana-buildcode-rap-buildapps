@@ -151,7 +151,7 @@ CLASS zcl_fill_bupa_tables IMPLEMENTATION.
                         i_destination = cl_http_destination_provider=>create_by_url( lv_url ) ).
 
         lo_http_client->get_http_request( )->set_header_fields( VALUE #(
-             (  name = 'APIKey' value = 'sIaDy4xGGgh5DpinJWEAqZt5FSWu5UGa' ) ) ).
+             (  name = 'APIKey' value = '{YOUR_API_KEY}' ) ) ).
 
         DATA(lo_client_proxy) = /iwbep/cl_cp_factory_remote=>create_v2_remote_proxy(
           EXPORTING
