@@ -39,7 +39,7 @@
 9. Go to list and enable it. Paste the formula below to the relative path
 
 ~~~
-/getInRadius?radius=10000000&point_lat='50'&point_lon='10'
+/getInRadius?radius=2000&point_lat='50'&point_lon='10'
 ~~~
 
 ![](../screenshots/Picture65.png)
