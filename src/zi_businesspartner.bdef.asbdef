@@ -1,0 +1,46 @@
+managed implementation in class zbp_i_businesspartner unique;
+strict ( 2 );
+
+define behavior for ZI_BusinessPartner
+persistent table zbupa
+lock master
+authorization master ( instance )
+{
+  static function getInRadius
+    parameter ZD_GEO_PARAMETERS
+    result [0..*] ZD_GETINRADIUS_RESULT;
+
+
+  create;
+  update;
+  delete;
+  association _GeoData { create; }
+  field (readonly:update) Partner;
+
+  mapping for ZBUPA {
+    Partner = partner;
+    NameFirst = name_first;
+    NameLast = name_last;
+  }
+
+}
+
+define behavior for ZI_BusinessPartnerGeo
+persistent table zbupageo
+lock dependent by _BusinessPartner
+authorization dependent by _BusinessPartner
+{
+  update;
+  delete;
+  field ( readonly ) Partner;
+  association _BusinessPartner;
+
+  mapping for zbupageo {
+    Partner = partner;
+    Latitude = latitude;
+    Longitude = longitude;
+    Location = location;
+  }
+
+  determination setGEOPoint on modify {create; field Latitude, Longitude; }
+}

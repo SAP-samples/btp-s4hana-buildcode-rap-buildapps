@@ -1,0 +1,5 @@
+@EndUserText.label: 'Geo Service'
+define service ZGEO {
+  expose ZC_BusinessPartner    as BusinessPartner;
+  expose ZC_BusinessPartnerGeo as BusinessPartnerGeo;
+}

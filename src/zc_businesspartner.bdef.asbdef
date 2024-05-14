@@ -1,0 +1,21 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_BusinessPartner
+{
+  use create;
+  use update;
+  use delete;
+
+  use function getInRadius;
+
+  use association _GeoData { create; }
+}
+
+define behavior for ZC_BusinessPartnerGeo
+{
+  use update;
+  use delete;
+
+  use association _BusinessPartner;
+}
