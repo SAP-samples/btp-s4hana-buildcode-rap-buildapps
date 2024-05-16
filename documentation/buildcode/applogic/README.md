@@ -25,7 +25,7 @@ We already have created the data model, service, and sample data with Joule. Now
 6. Copy the prompt below:
 
 ```
-write a validation , that if someone try to update the incident with status with ID as closed , then throw the error Can't modify a closed incident.
+Write a validation , that if someone tries to update the incident with status equal to closed ('C') , then throw an error "Can't modify a closed incident".
 ```
 
 7. Choose **Generate**.
