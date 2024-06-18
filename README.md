@@ -53,10 +53,8 @@ The tutorial focus on building **Fusion Application** on where professional and 
     | ----------- | ----------- | 
     | **Step 1**: [SAP Build Code with Joule](./documentation/buildcode/Readme.md) | Build and Deploy Full Stack CAP Application on Cloud Foundry using Ai Enabled Joule |
     | **Step 2**: [RESTful ABAP Service](./documentation/rap/README.md) | Build and Deploy Full Stack Restful ABAP Application | 
-    | **Step 3**: [Integration](./documentation/integration/README.md)  | Configure SAP BTP Destination for CAP and RAP Service |
-    | **Step 4**: [SAP Build Apps](./documentation/buildapps/Readme.md)  | Configure SAP Build Apps and Build **Service Hub** and  **Service Hub Admin** web application |
-    | **Step 5**: [Test Service Hub](./documentation/buildapps/Service%20Hub%20Client%20App/4_Test%20your%20application/Readme.md)| Create a new incident using **Service Hub** Application |
-    | **Step 6**: [Test Service Hub Admin](./documentation/buildapps/Service%20Hub%20Admin%20App/6_Test%20your%20application/Readme.md)| Get the incidents created from Service Hub, assign the processor, update the priority and status using **Service Hub Admin** Application |
+    | **Step 3**: [SAP Build Apps](./documentation/SAP%20Build%20Apps/Readme.md)  | Configure SAP Build Apps and create 2 web applications: one for customers, one for admin |
+    | **Step 4**: [Test End to End Setup](./documentation/deploy/README.md)| Develop and Deploy CAP Application and integrate Application with SAP Build Work Zone, Standard Edition |
 
 
 ## How to obtain support
