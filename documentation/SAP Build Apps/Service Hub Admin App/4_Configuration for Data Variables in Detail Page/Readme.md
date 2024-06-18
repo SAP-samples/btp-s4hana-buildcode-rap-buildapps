@@ -1,77 +1,64 @@
 # Module 3 - Unit 2_4: Configuration for Data Variables in Detail Page
 
-1. **Go** to the page: Incident Detail. **Switch** to Variables. **Select** Data variables and **create** a new data variable for Incidents
+1. Go to the page: **Incident Detail**. Switch to **Variables**. Select **Data variables** and create a new data variable for **Incidents**.
 
 ![](../screenshots/Picture78.png)
 
-
-2. **Change** the data variable type to Single data record and **click** on X under ID to **follow the path**: Data and Variables > Page parameter
+2. Change the **Data variable type** to **Single data record** and select **X** button under **ID**. Then follow the path: **Data and Variables** > **Page parameter**.
 
 ![](../screenshots/Picture79.png)
 
-
-3. **Select** the page parameter IncidentID and **Save** it 
+3. Select the page parameter **IncidentID** and then choose **Save**. 
 
 ![](../screenshots/Picture80.png)
 
-
-4. **Create** a new data variable for Conversation
+4. Create a new data variable for **Conversation**.
 
 ![](../screenshots/Picture81.png)
 
-
-5. **Select** Conversation1 data variable and **click** on the X under Filter condition to select the Object with properties
+5. Select **Conversation1** data variable and choose the **X** button under **Filter condition** to select the **Object with properties**.
 
 ![](../screenshots/Picture82.png)
 
-6. **Select** incident_ID from the dropdown list for Property. Then, **click** on the ABC under Compared value to follow the path: Data and Variables > Page parameter
+6. Select **incident_ID** from the dropdown list for **Property**. Then, choose **ABC** button under **Compared value** to follow the path: **Data and Variables** > **Page parameter**
 
 ![](../screenshots/Picture83.png)
 
-
-7. **Select** page parameter: Incident ID and **Save** it
+7. Select page parameter **Incident ID** and then choose **Save**.
 
 ![](../screenshots/Picture84.png)
 
-
-8. **Add** a data variable for BPData
+8. Add a data variable for **BPData**.
 
 ![](../screenshots/Picture85.png)
 
-
-9. **Select** the data variable BPData1 and **change** the data variable type to Single data record. Then, **open** the Logic Editor  
+9. Select the data variable **BPData1** and change the **Data variable type** to **Single data record**. Then, open the Logic Editor.
 
 ![](../screenshots/Picture86.png)
 
-
-10. **Drag and drop** the Receive event component. **Select** the Event source: Page variable "SelectedRadius" changed
+10. Drag and drop the **Receive event** component. Select the **Event source**: **Page variable "SelectedRadius" changed**.
 
 ![](../screenshots/Picture87.png)
 
-
-11. **Remove** the logic components "Get record" and "Set data variable". **Click** on the component to select and **press** delete button in your keyboard to remove 
+11. Remove the logic components **Get record** and **Set data variable**. Click on the component to select and press delete button on your keyboard to remove. 
 
 ![](../screenshots/Picture88.png)
 
-
-12. **Drag and drop** the following logic components and **connect** them to each other as it is shown in the screenshot. You will find all the components under Core tab on the left.
+12. Drag and drop the following logic components and connect them to each other as it is shown in the screenshot. You will find all the components under Core tab on the left.
 
 >Delay>Get record collection>Set data variable>If condition>Alert>Set page variable 
 
 ![](../screenshots/Picture89.png)
 
-
-13. **Select** Delay. **Configure** the delay time to 1 second
+13. Select **Delay**. Configure the delay time to 1 second using **Time to wait** and **Unit** fields.
 
 ![](../screenshots/Picture90.png)
 
-
-14. **Select** Get record collection. **Click** on X under radius and **follow the path**: Data and Variables > Page variable
+14. Select **Get record collection**. Select the **X** button under **radius** and follow the path: **Data and Variables** > **Page variable**.
 
 ![](../screenshots/Picture91.png)
 
-
-15. **Select** the page variable SalectedRadius and **Save** it
+15. Select the page variable **SalectedRadius** and then choose **Save**.
 
 ![](../screenshots/Picture92.png)
 
