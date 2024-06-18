@@ -4,7 +4,7 @@
 
 ![](../screenshots/Picture26.png)
 
-2. Now, we will configure the logic for the button at the end of this form. So that, user can create a new incident by clicking it. **Select** the button and open the logic editor tab from the bottom of your page.
+2. Now, we will configure the logic for the button at the end of this form. So that, user can create a new incident by clicking it. Select the **Create a new incident** button and open the logic editor tab from the bottom of your page.
 
 ![](../screenshots/Picture27.png)
 
@@ -12,27 +12,27 @@
 
 ![](../screenshots/Picture28.png)
 
-4. **Select** Create record logic component. **Click** on the X icon to select a resource and select data entity
+4. Select **Create record** logic component. Click on the **X** icon to select a resource and select **Data entity**.
 
 ![](../screenshots/Picture29.png)
 
-5. **Select** the data entity: Incidents. **Save** it. Now, the record will be created in the Incidents data entity
+5. Select the data entity **Incidents**. Then choose **Save**. Now, the record will be created in the Incidents data entity.
 
 ![](../screenshots/Picture30.png)
 
-6. **Click** on Custom Object
+6. Choose **Custom Object** button.
 
 ![](../screenshots/Picture31.png)
 
-7. **Click** on the ABC icon under ID and **go** to Formula
+7. Choose **ABC** icon under ID and then select **Formula**.
 
 ![](../screenshots/Picture32.png)
 
-8. **Click** on the formula bar
+8. Click on the formula bar
 
 ![](../screenshots/Picture33.png)
 
-9. **Paste** the formula below and **save** it
+9. Paste the formula below and then chosse **Save**.
 
 ~~~
 GENERATE_UUID()
@@ -40,31 +40,31 @@ GENERATE_UUID()
 
 ![](../screenshots/Picture34.png)
 
-10. **Click** on the X icon under title and **Follow** the path: Data and Variables > Data variable > Incidents1
+10. Select the **X** icon under title and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
 
 ![](../screenshots/Picture35.png)
 
-11. **Select** title and **Save** it
+11. Select **title** and them choose **Save**.
 
 ![](../screenshots/Picture36.png)
 
-12. **Click** on the X icon under company and **Follow** the path: Data and Variables > Data variable > Incidents1
+12. Select the **X** icon under company and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
 
 ![](../screenshots/Picture37.png)
 
-13. **Select** company and **Save** it
+13. Select **company** and then choose **Save**.
 
 ![](../screenshots/Picture38.png)
 
-14. **Click** on the X icon under latitude and **go** to Formula
+14. Select the **X** icon under latitude and then choose **Formula**.
 
 ![](../screenshots/Picture39.png)
 
-15. **Click** on the formula bar
+15. Click on the formula bar.
 
 ![](../screenshots/Picture40.png)
 
-16. **Paste** the formula below and **save** it. This formula gets the latitude data that Build Apps stores in the sensor variables.
+16. Paste the formula below and then choose **Save**. This formula gets the latitude data that Build Apps stores in the sensor variables.
 
 ~~~
 STRING(sensorVars.geolocation.latestValue.latitude)
@@ -72,15 +72,15 @@ STRING(sensorVars.geolocation.latestValue.latitude)
 
 ![](../screenshots/Picture41.png)
 
-17. **Click** on the X icon under createdAt and** **go to Formula
+17. Select the **X** icon under createdAt and then choose **Formula**.
 
 ![](../screenshots/Picture42.png)
 
-18. **Click** on the formula bar
+18. Click on the formula bar.
 
 ![](../screenshots/Picture43.png)
 
-19. **Paste** the formula below and **save** it. This formula gets current date and time.
+19. Paste the formula below and then choose **Save**. This formula gets current date and time.
 
 ~~~
 NOW()
@@ -88,15 +88,15 @@ NOW()
 
 ![](../screenshots/Picture44.png)
 
-20. **Click** on the X icon under longitude and **go** to Formula
+20. Select the **X** icon under longitude and then choose **Formula**.
 
 ![](../screenshots/Picture45.png)
 
-21. **Click** on the formula bar
+21. Click on the formula bar.
 
 ![](../screenshots/Picture46.png)
 
-22. **Paste** the formula below and **save** it. This formula gets the longitude data that Build Apps stores in the sensor variables.
+22. Paste the formula below and then choose **Save**. This formula gets the longitude data that Build Apps stores in the sensor variables.
 
 ~~~
 STRING(sensorVars.geolocation.latestValue.longitude)
@@ -104,64 +104,61 @@ STRING(sensorVars.geolocation.latestValue.longitude)
 
 ![](../screenshots/Picture47.png)
 
-23. **Click** on the X icon under description and **Follow** the path: Data and Variables > Data variable > Incidents1 
+23. Select the **X** icon under description and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
 
 ![](../screenshots/Picture48.png)
 
-24. **Select** description and **Save** it
+24. Select **description** and then choose **Save**.
 
 ![](../screenshots/Picture49.png)
 
-
-25. **Click** on the X icon under urgency_code and **Follow** the path: Data and Variables > App variable 
+25. Select the **X** icon under urgency_code and follow the path: **Data and Variables** > **App variable**. 
 
 ![](../screenshots/Picture69.png)
 
-26. **Select** Urgency
+26. Select **Urgency**.
 
 ![](../screenshots/Picture70.png)
 
-27. **Click** on the X icon under medicaldevice_ID and **Follow** the path: Data and Variables > Data variable > Incidents1 
+27. Select the **X** icon under medicaldevice_ID and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
 
 ![](../screenshots/Picture71.png)
 
-28. **Select** medicaldevice_ID and **Save** it
+28. Select **medicaldevice_ID** and then choose **Save**.
 
 ![](../screenshots/Picture72.png)
 
-29. **Save** the object
+29. Select **Save** to save the object.
 
 ![](../screenshots/Picture73.png)
 
-
-30. **Save** your project
+30. **Save** your project.
 
 ![](../screenshots/Picture58.png)
 
-> After create record process is successfuly completed, the spinner will be hiden. Therefore, "Hide Spinner" component is connected to the first node* of "Create Record" component. A Popup window will be shown to user via Alert logic component.
+> After create record process is successfuly completed, the spinner will be hiden. Therefore, **Hide Spinner** component is connected to the first node of **Create Record** component. A Popup window will be shown to user via **Alert logic** component.
 
-> *First nodes are always the success node for logic components in SAP Build Apps while the second nodes are the fail nodes. If there are 3 nodes for the logic component, third nodes are the fail nodes.
+> First nodes are always the success node for logic components in SAP Build Apps while the second nodes are the fail nodes. If there are 3 nodes for the logic component, third nodes are the fail nodes.
 
-31.  We want to see a blank form after the incident is created. To do that, **click** on the last logic component called Set Data Variable and **click** on the X icon under data variable name to select one 
+31. We want to see a blank form after the incident is created. To do that, select the last logic component called **Set Data Variable** and then choose the **X** icon under **Data variable name** to select one. 
 
 ![](../screenshots/Picture59.png)
 
-32. **Select** Incidents1 and **Save** it
+32. Select **Incidents1** and then choose **Save**.
 
 ![](../screenshots/Picture60.png)
 
-33. **Click** on Custom object
+33. Select **Custom object**.
 
 ![](../screenshots/Picture61.png)
 
-34. Here you can see that none of the data fields has a value. That means, the user input data will be removed after the incident is submitted by the user. You can simply **close** this window.
+34. Here you can see that none of the data fields has a value. That means, the user input data will be removed after the incident is submitted by the user. You can simply close this window.
 
 ![](../screenshots/Picture62.png)
 
-35. **Save** your project 
+35. **Save** your project.
 
 ![](../screenshots/Picture63.png)
-
 
 You have successfully completed the application! 
 
