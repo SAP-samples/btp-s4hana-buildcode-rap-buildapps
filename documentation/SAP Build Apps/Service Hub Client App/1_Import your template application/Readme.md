@@ -12,22 +12,19 @@
 
 ![](/documentation/SAP%20Build%20Apps/Service%20Hub%20Admin%20App/screenshots/Picture178.png)
 
-4. **Import** the template application
+4. Select the project and choose **Import** button.
 
 ![](../screenshots/Picture201.png)
 
-
-5. **Rename** Project 
+5. Choose **Rename Project** item in the project menu. 
 
 ![](../screenshots/Picture202.png)
 
-
-6.  **Save** the project
+6.  Enter a name (e.g. **Service Hub Client**) and then choose **Save** button.
 
 ![](../screenshots/Picture203.png)
 
-
-7. **Go** to your project
+7. Go to your project by selecting it's name.
 
 ![](../screenshots/Picture204.png)
 
