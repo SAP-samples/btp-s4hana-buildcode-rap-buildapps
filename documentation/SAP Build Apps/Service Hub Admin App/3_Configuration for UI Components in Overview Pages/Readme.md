@@ -1,39 +1,34 @@
 # Module 3 - Unit 2_3: Configuration for UI Components in Overview Pages
 
-1. **Go** to Page: All Incidents
+1. Go to page **All Incidents**.
 
 ![](../screenshots/Picture10.png)
 
-2. **Switch** to Variables. **Go** to Data variables and **add** a new data variable for Medicaldevice
+2. Switch to **Variables**. Go to **Data variables** and choose **Add data variable** for **Medicaldevice** entity.
 
 ![](../screenshots/Picture11.png)
 
-3. **Add** another data variable. This is for Incidents
-
+3. Add another data variable. This time for **Incidents**.
 
 ![](../screenshots/Picture12.png)
 
-4. **Switch** back to view. **Select** the list item and **go** to Repeat with and **follow the path**: Data and Variables > Data variable
-
+4. Switch back to **View**. Select the list item and choose arrows button under **Repeat with** title. Follow the path: **Data and Variables** > **Data variable**.
 
 ![](../screenshots/Picture17.png)
 
-5. **Select** Incidents1 and **Save** it
-
+5. Select **Incidents1** and then choose **Save**.
 
 ![](../screenshots/Picture18.png)
 
-6. **Go** to Primary label and then **go** to Formula
-
+6. Select **ABC** button under the **Primary label** and then choose **Formula**.
 
 ![](../screenshots/Picture19.png)
 
-7. **Click** on the Formula bar
-
+7. Click on the Formula bar.
 
 ![](../screenshots/Picture20.png)
 
-8. **Paste** the formula below and **Save** it
+8. Paste the formula below and then choose **Save**.
 
 ~~~
 repeated.current.title+ "\nID: " + repeated.current.ID
@@ -41,17 +36,15 @@ repeated.current.title+ "\nID: " + repeated.current.ID
 
 ![](../screenshots/Picture21.png)
 
-9. **Go** to Secondary label and then **go** to Formula
-
+9. Select **ABC** button under the **Secondary label** and then choose **Formula**.
 
 ![](../screenshots/Picture22.png)
 
-10. **Click** on the Formula bar
-
+10. Click on the Formula bar.
 
 ![](../screenshots/Picture23.png)
 
-11. **Paste** the formula below and **Save** it
+11. Paste the formula below and then choose **Save**.
 
 ~~~
 repeated.current.company
@@ -59,30 +52,25 @@ repeated.current.company
 
 ![](../screenshots/Picture24.png)
 
-12. **Go** to Logic Editor tab
-
+12. Go to Logic Editor tab.
 
 ![](../screenshots/Picture25.png)
 
+13. Select **Open page** logic component and choose the **X** button under the **IncidentID** page parameter.
 
-13. **Select** Open page logic component and **go** to the IncidentID page parameter
-
-> Here the Open Page logic component redirect user to the Incident Detail page. As there is already a page parameter called IncidentID in the Incident Detail page, we will be passing the ID of the selected incident in this Incidents table while redirecting user to the next page. 
+> Here the Open Page logic component redirect user to the Incident Detail page. As there is already a page parameter called **IncidentID** in the Incident Detail page, we will be passing the ID of the selected incident in this Incidents table while redirecting user to the next page. 
 
 ![](../screenshots/Picture26.png)
 
-
-14. **Select** data item in repeat
+14. Select **Data item in repeat**.
 
 ![](../screenshots/Picture27.png)
 
-
-15. **Select** current. Then select ID and **Save** it
+15. Select **current**. Then select **ID** and **Save** it.
 
 ![](../screenshots/Picture28.png)
 
-
-16. **Save** your project
+16. **Save** your project.
 
 ![](../screenshots/Picture29.png)
 
