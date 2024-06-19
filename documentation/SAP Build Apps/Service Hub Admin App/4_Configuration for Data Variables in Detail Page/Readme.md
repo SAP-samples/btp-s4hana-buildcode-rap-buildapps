@@ -62,41 +62,35 @@
 
 ![](../screenshots/Picture92.png)
 
-16. **Click** on X under point_lat and **follow** the path: Data and Variables > Data variable
+16. Select the **X** button under **point_lat** and follow the path: **Data and Variables** > **Data variable**.
 
 ![](../screenshots/Picture93.png)
 
-
-17. **Select** latitude and **Save** it
+17. Select **latitude** and then choose **Save**.
 
 ![](../screenshots/Picture94.png)
 
-
-18. **Click** on X under point_lon and **follow the path**: Data and Variables > Data variable
+18. Select the **X** button under **point_lon** and follow the path: **Data and Variables** > **Data variable**.
 
 ![](../screenshots/Picture95.png)
 
-
-19. **Select** longitude and **Save** it
+19. Select **longitude** and then choose **Save**.
 
 ![](../screenshots/Picture96.png)
  
-
-20. **Select** Set data variable. **Go** to the bound field under Data variable name
+20. Select **Set data variable** node. Go to the bound field under **Data variable name**.
 
 ![](../screenshots/Picture97.png)
 
-21. **Select** the data variable BPData1
+21. Select the data variable **BPData1**.
 
 ![](../screenshots/Picture98.png)
 
-
-22. **Click** on the {} icon under data and **go** to Formula
+22. Select the **{}** icon under **data** and then choose **Formula**.
 
 ![](../screenshots/Picture99.png)
 
-
-23. **Paste** the formula below. This formula will get the output from get record collection component and **save** it to the BPData1
+23. Paste the formula below. This formula will get the output from **Get record collection** component and save it to the **BPData1**.
 
 ~~~
 outputs["Get record collection"].records
@@ -104,27 +98,23 @@ outputs["Get record collection"].records
 
 ![](../screenshots/Picture100.png)
 
-
-24. **Select** If condition. Then, **click** on the icon under Condition and **go** to Formula
+24. Select **If condition** node. Then, choose the icon under **Condition** and then select **Formula**.
 
 ![](../screenshots/Picture101.png)
 
-
-25. **Click** on the Formula Bar
+25. Click on the Formula Bar.
 
 ![](../screenshots/Picture102.png)
 
-26. **Paste** the formula below and **Save** it. This formula will check if the BPData1 has any result or not. If there is no result, that means there is no Business Partner around based on the given Latitude, Longitude and Radius.
+26. Paste the formula below and **Save** it. This formula will check if the **BPData1** has any result or not. If there is no result, that means there is no Business Partner around based on the given Latitude, Longitude and Radius.
 
 ~~~
 IS_EMPTY(data.BPData1.d.results)
 ~~~
 
-
 ![](../screenshots/Picture103.png)
 
-
-27. **Select** the Alert component and **paste** the dialog below to the Dialog title field. This dialog will be shown to the end user if there is no data in BPData1 data variable
+27. Select the **Alert** component and paste the message below to the **Dialog title** field. This dialog will be shown to the end user if there is no data in **BPData1** data variable.
 
 ~~~
 No Business Partner can be listed within the given range. Radius is set to maximum to list all Business Partners
@@ -132,18 +122,15 @@ No Business Partner can be listed within the given range. Radius is set to maxim
 
 ![](../screenshots/Picture104.png)
 
-
-28. **Select** the Set page variable and **Click** on the variable field under variable name
+28. Select the **Set page variable** and then choose the variable field under **Variable name**.
 
 ![](../screenshots/Picture105.png)
 
-
-29. **Select** the variable: SelectedRadius and Save it
+29. Select the variable: **SelectedRadius** and then choose **Save**.
 
 ![](../screenshots/Picture106.png)
 
-
-30. **Add** the value 9999 to the Assigned value. **Save** your project
+30. Add the value **9999** to the **Assigned value**. **Save** your project.
 
 ![](../screenshots/Picture107.png)
 
