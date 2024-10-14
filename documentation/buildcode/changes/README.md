@@ -1,28 +1,30 @@
 # Adapt Schema for Status and Urgency
 
-In incident managment application, we will remove ID for both Status and Urgency and make code as key. We will adapt the schema using graphical modeler UI.
+In the Equipment Maintenance application, we will remove ID for both **Status** and **Urgency** and make **code** as key. We will adapt the schema using graphical modeler UI.
 
-1. In the **Data Model**, choose **Status** and click.
+1. In the **Storyboard** tab of the application, under the **Data Models** choose **Status**.
 
-2. Choose **Open in Graphical Modeler**.
+2. Choose **Open in Graphical Modeler** in the popup menu.
 
-![](./images/statusopen.png)
+  ![](./images/statusopen.png)
 
-3. Choose **ID** and then choose **Delete** icon to remove it from schema.
+3. Select the header of the entity and then choose **Show Details** icon.
 
-![](./images/statusid.png)
+  ![](./images/status-details.png)
 
-4. Choose **code** and then choose **Show Details** icon.
+4. In the right pane select the **Aspects** tab and then uncheck the **cuid** checkbox. It will remove the **ID** key field from the entity.
 
-![](./images/codeselect.png)
+  ![](./images/status-remove-aspect.png)
 
-5. In the properties of **Key Properties**, choose **Yes**. this will make code as key field for Status schema.
+5. In the entity choose the **code** field and in the right pane choose **Yes** against the **Key Properties** option. This will make the code as key field for the **Status** schema.
 
-![](./images/codekey.png)
+  ![](./images/codekey.png)
 
-Repeat the whole steps for **Urgency** model as well. The final look of schema for both data model are below.
+Repeat the steps for the **Urgency** model as well. The final look of schema for both data models should look like this:
 
-![](./images/both.png)
+  ![](./images/both.png)
 
-[Next: Enhance the Sample Data Using Joule](../sampledata/README.md)
+## Next Step
+
+[Enhance the Sample Data Using Joule](../sampledata/README.md)
 

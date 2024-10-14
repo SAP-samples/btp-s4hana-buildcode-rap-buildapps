@@ -1,46 +1,48 @@
-# Add UI to the Incident Management Application
+# Add UI to the Equipment Maintenance Application
 
-To display and test the content we created for the incident management program, we need to create an SAP Fiori elements UI.
+To display and test the content you have created for the Equipment Maintenance application, you need to create an SAP Fiori elements UI.
 
-1. Go to back to the **Storyboard** and add a UI application.
+1. Go to back to the **Storyboard** tab and add a UI to the Equipment Maintenance application.
 
-![](./images/storyboard.png)
+  ![](./images/storyboard.png)
 
-2. We will start with the user interface for the **Incidents** data entity.Set the Display name to **Incidents** and the Description to **Incident Management**, and then choose **Next**.
+2. Start with the user interface for the **Incidents** application. In the **Display Name** field, enter **Incidents** and in the **Description** field, enter **Equipment Maintenance**. Then, choose **Next**.
 
-![](./images/adduimodule.png)
+  ![](./images/adduimodule.png)
 
-3. We are using the browser, so we will select **Template-Based Responsive Application** as the UI Application type, and click **Next**.
+3. You use the Equipment Maintenance application in a browser, that's why choose **Template-Based Responsive Application** as the UI Application type, and choose **Next**.
 
-![](./images/adduitype.png)
+  ![](./images/adduitype.png)
 
-4. Select **List Report Page** as the UI application template, and click **Next**.
+4. Choose **List Report Page** as the UI application template, and then choose **Next**.
 
-![](./images/listreport.png)
+  ![](./images/listreport.png)
 
-5. Select **Incidents** as the Main entity, and click **Finish**. The page will be created now.
+5. Choose **Incidents** as the Main entity, and then choose **Finish**. The page will be created now.
 
-![](./images/dataobject.png)
+  ![](./images/dataobject.png)
 
-6. To preview your application, once the files have been generated, go to the upper-right corner, and **click preview (Run and Debug)**.
+6. To preview your application, once the files have been generated, go to the upper-right corner, and choose **Preview (Run and Debug)**.
 
-![](./images/run.png)
+  ![](./images/run.png)
 
 7. The application’s preview is displayed.
 
-![](./images/apppreview.png)
+  ![](./images/apppreview.png)
 
-8. Choose Web application **Incidents** and you will see the list view.
+8. Choose the **Incidents** Web application and you will see the list view.
 
-![](./images/inicidentlist.png)
+  ![](./images/inicidentlist.png)
 
 9. Choose any incident and view the object page.
 
-![](./images/incidentdata.png)
+  ![](./images/incidentdata.png)
 
-10. You can also see the service for all entity as well. Below is the snapshot for **Medicaldevic** service.
+10. You can also see the service for all the entities as well. This is the snapshot for **Medicaldevic** service:
 
-![](./images/medical.png)
+  ![](./images/medical.png)
 
-[Next: Deploy the Application Using One Click Deployment](../deploy/README.md)
+## Next Step
+
+[Deploy the Application Using One-Click Deployment](../deploy/README.md)
 

@@ -1,38 +1,38 @@
-# Module 3 - Unit 1_3: Logic building 
+# Build the Application Logic 
 
-1. You can see that each input field in the form that you imported using template application has a value that is already bounded. Here is an example for the first input field (Title) is bounded to Incidents1.title. That means, the value of the title will be saved into this data variable after user`s input
+You can see that each input field in the form that you have imported using application template has a value that is already bounded. Here is an example of the first input field (Title) that is bounded to Incidents1.title. That means that the value of the title will be saved into this data variable after a user's input.
 
 ![](../screenshots/Picture26.png)
 
-2. Now, we will configure the logic for the button at the end of this form. So that, user can create a new incident by clicking it. Select the **Create a new incident** button and open the logic editor tab from the bottom of your page.
+1. Configure the logic for the button at the end of this form, so that a user can create a new incident by clicking it. Choose **Create a new incident** and open the logic editor tab at the bottom of your page.
 
 ![](../screenshots/Picture27.png)
 
-3. Let´s check the preconfigured logic to understand the whole process. Once the component (button) is tapped, a spinner will be shown to user to notify them the record creation process has started. Here the spinner will also show a text that can be adjusted by the developer: Incident is being created
+2. Check the preconfigured logic to understand the whole process. Once the component (button) is tapped, a spinner will be shown to a user to notify them that the record creation process has started. Here the spinner will also show a text that can be adjusted by the developer: Incident is being created.
 
 ![](../screenshots/Picture28.png)
 
-4. Select **Create record** logic component. Click on the **X** icon to select a resource and select **Data entity**.
+3. Choose the **Create record** logic component. Choose the **X** icon to select a resource and then choose **Data entity**.
 
 ![](../screenshots/Picture29.png)
 
-5. Select the data entity **Incidents**. Then choose **Save**. Now, the record will be created in the Incidents data entity.
+4. Choose the **Incidents** data entity and then choose **Save**. The record will be created in the **Incidents** data entity.
 
 ![](../screenshots/Picture30.png)
 
-6. Choose **Custom Object** button.
+5. Choose **Custom Object**.
 
 ![](../screenshots/Picture31.png)
 
-7. Choose **ABC** icon under ID and then select **Formula**.
+6. Choose the **ABC** icon under ID and then choose **Formula**.
 
 ![](../screenshots/Picture32.png)
 
-8. Click on the formula bar
+7. Click the formula bar.
 
 ![](../screenshots/Picture33.png)
 
-9. Paste the formula below and then chosse **Save**.
+8. Paste the formula below and then choose **Save**.
 
 ~~~
 GENERATE_UUID()
@@ -40,31 +40,31 @@ GENERATE_UUID()
 
 ![](../screenshots/Picture34.png)
 
-10. Select the **X** icon under title and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
+9. Choose the **X** icon under title and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
 
 ![](../screenshots/Picture35.png)
 
-11. Select **title** and them choose **Save**.
+10. Choose **title** and then choose **Save**.
 
 ![](../screenshots/Picture36.png)
 
-12. Select the **X** icon under company and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
+11. Choose the **X** icon under company and follow the path: **Data and Variables** > **Data variable** > **Incidents1**.
 
 ![](../screenshots/Picture37.png)
 
-13. Select **company** and then choose **Save**.
+12. Choose **company** and then choose **Save**.
 
 ![](../screenshots/Picture38.png)
 
-14. Select the **X** icon under latitude and then choose **Formula**.
+13. Choose the **X** icon under latitude and then choose **Formula**.
 
 ![](../screenshots/Picture39.png)
 
-15. Click on the formula bar.
+14. Click the formula bar.
 
 ![](../screenshots/Picture40.png)
 
-16. Paste the formula below and then choose **Save**. This formula gets the latitude data that Build Apps stores in the sensor variables.
+15. Paste the formula below and then choose **Save**. This formula gets the latitude data that SAP Build Apps stores in the sensor variables.
 
 ~~~
 STRING(sensorVars.geolocation.latestValue.latitude)
@@ -72,15 +72,15 @@ STRING(sensorVars.geolocation.latestValue.latitude)
 
 ![](../screenshots/Picture41.png)
 
-17. Select the **X** icon under createdAt and then choose **Formula**.
+16. Choose the **X** icon under createdAt and then choose **Formula**.
 
 ![](../screenshots/Picture42.png)
 
-18. Click on the formula bar.
+17. Click the formula bar.
 
 ![](../screenshots/Picture43.png)
 
-19. Paste the formula below and then choose **Save**. This formula gets current date and time.
+18. Paste the formula below and then choose **Save**. This formula gets the current date and time.
 
 ~~~
 NOW()
@@ -88,15 +88,15 @@ NOW()
 
 ![](../screenshots/Picture44.png)
 
-20. Select the **X** icon under longitude and then choose **Formula**.
+19. Choose the **X** icon under longitude and then choose **Formula**.
 
 ![](../screenshots/Picture45.png)
 
-21. Click on the formula bar.
+20. Click the formula bar.
 
 ![](../screenshots/Picture46.png)
 
-22. Paste the formula below and then choose **Save**. This formula gets the longitude data that Build Apps stores in the sensor variables.
+21. Paste the formula below and then choose **Save**. This formula gets the longitude data that SAP Build Apps stores in the sensor variables.
 
 ~~~
 STRING(sensorVars.geolocation.latestValue.longitude)
@@ -104,64 +104,66 @@ STRING(sensorVars.geolocation.latestValue.longitude)
 
 ![](../screenshots/Picture47.png)
 
-23. Select the **X** icon under description and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
+22. Choose the **X** icon under description and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
 
 ![](../screenshots/Picture48.png)
 
-24. Select **description** and then choose **Save**.
+23. Choose **description** and then choose **Save**.
 
 ![](../screenshots/Picture49.png)
 
-25. Select the **X** icon under urgency_code and follow the path: **Data and Variables** > **App variable**. 
+24. Choose the **X** icon under urgency_code and follow the path: **Data and Variables** > **App variable**. 
 
 ![](../screenshots/Picture69.png)
 
-26. Select **Urgency**.
+25. Choose **Urgency**.
 
 ![](../screenshots/Picture70.png)
 
-27. Select the **X** icon under medicaldevice_ID and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
+26. Select the **X** icon under medicaldevice_ID and follow the path: **Data and Variables** > **Data variable** > **Incidents1**. 
 
 ![](../screenshots/Picture71.png)
 
-28. Select **medicaldevice_ID** and then choose **Save**.
+27. Choose **medicaldevice_ID** and then choose **Save**.
 
 ![](../screenshots/Picture72.png)
 
-29. Select **Save** to save the object.
+28. Save the object.
 
 ![](../screenshots/Picture73.png)
 
-30. **Save** your project.
+29. Save your project.
 
 ![](../screenshots/Picture58.png)
 
-> After create record process is successfuly completed, the spinner will be hiden. Therefore, **Hide Spinner** component is connected to the first node of **Create Record** component. A Popup window will be shown to user via **Alert logic** component.
+> After the create record process is successfuly completed, the spinner will be hidden. Therefore, the **Hide Spinner** component is connected to the first node of the **Create Record** component. A Popup window will be shown to the user via the **Alert logic** component.
 
-> First nodes are always the success node for logic components in SAP Build Apps while the second nodes are the fail nodes. If there are 3 nodes for the logic component, third nodes are the fail nodes.
+> First nodes are always the success nodes for logic components in SAP Build Apps while the second nodes are the fail nodes. If there are three nodes for the logic component, the third nodes are the fail nodes.
 
-31. We want to see a blank form after the incident is created. To do that, select the last logic component called **Set Data Variable** and then choose the **X** icon under **Data variable name** to select one. 
+30. You want to see a blank form after the incident is created. To do that, select the last logic component called **Set Data Variable** and then choose the **X** icon under **Data variable name** to select one. 
 
 ![](../screenshots/Picture59.png)
 
-32. Select **Incidents1** and then choose **Save**.
+31. Choose **Incidents1** and then choose **Save**.
 
 ![](../screenshots/Picture60.png)
 
-33. Select **Custom object**.
+32. Choose **Custom object**.
 
 ![](../screenshots/Picture61.png)
 
-34. Here you can see that none of the data fields has a value. That means, the user input data will be removed after the incident is submitted by the user. You can simply close this window.
+33. Here you can see that none of the data fields has a value. That means, the user input data will be removed after the incident is submitted by the user. You can simply close this window.
 
 ![](../screenshots/Picture62.png)
 
-35. **Save** your project.
+34. Save your project.
 
 ![](../screenshots/Picture63.png)
 
 You have successfully completed the application! 
 
-**[Next Module 3 - Unit 1_4: Test your application](../4_Test%20your%20application/Readme.md) >**
+## Next Step
+
+[Test Your Application](../4_Test%20your%20application/Readme.md)
 
 

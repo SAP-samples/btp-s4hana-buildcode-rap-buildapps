@@ -2,17 +2,15 @@
 
 ## Introduction 
 
-In this exercise, you will create 2 database tables which will represent the basis of the data model of your service.
+In this part, you will create 2 database tables which will represent the basis of the data model of your service.
 
-We need 2 tables to split master data and transactional data. One table will be used for storing business partner general information. Another one will contain current position of the partner.
+You need 2 tables to split the master data and the transactional data. The first table will be used for storing business partner general information. The other one will contain the current position of the partner.
 
-## Content
+## 1. Create a Table for Business Partners
 
-### Task 1: Create a table for Business Partners
+1. Right click your package name created in the previous part.
 
-1. Right click on your package name created in the previous exercise.
-
-2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.
 
   ![New Object](../common-images/new-object.png) 
 
@@ -27,9 +25,9 @@ We need 2 tables to split master data and transactional data. One table will be 
 
   ![Object data](img/03-table-data.png) 
 
-5. On the next screen select your transport (if applicable) and choose **Finish**.
+5. Select your transport (if applicable) and choose **Finish**.
 
-6. Replace the code of the table with the one below
+6. Replace the code of the table with the one below:
 
 ~~~abap
 @EndUserText.label : 'Business Partners'
@@ -47,16 +45,16 @@ define table zbupa {
 }
 ~~~
 
-> For the simplicity reason we only have partner names in this table.
+> For simplicity, you only have partner names in this table.
 
-7. Choose **Activate** button.
+7. Choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
-### Task 2: Create a table for Business Partners Geo Data
+## 2. Create a Table for Business Partners Geo Data
 
-1. Repeat all the steps from the previous task. But this time use the following table data:
+1. Repeat all the steps from the previous section. Only this time, use the following table data:
 
   - **ZBUPAGEO** in the **Name** field
   - **Geo Data of Business Partners** in the **Description** field
@@ -81,19 +79,21 @@ define table zbupageo {
 }
 ~~~
 
-> We use 2 ways of storing spatial data here - human readable geo coordinates and spatial type *abap.geom_ewkb*. On the one hand It's easier to deal with the pure coordinates during service requests. But on the other hand when we want to do some geo search in the database - we need to use HANA spatial engine. So both representations are necessary.
+> You use two ways of storing spatial data here - human-readable geo coordinates and spatial type *abap.geom_ewkb*. On the one hand, it's easier to deal with the pure coordinates during service requests. On the other hand, when you want to do some geo search in the database - you need to use SAP HANA spatial engine. So, both representations are necessary.
 
-> The data type GEOM_EWKB requires a coordinate reference system (a Spatial Reference System), namely a defined space in which geometric positions are described. Every spatial reference system has a unique spatial reference identifier (or SRID). A common SRID in use is 4326, which represents spatial data using longitude and latitude coordinates on the Earth's surface as defined in the WGS84 standard, which is also used for the Global Positioning System (GPS).
+> The GEOM_EWKB data type requires a coordinate reference system (a Spatial Reference System), namely a defined space in which geometric positions are described. Every spatial reference system has a unique spatial reference identifier (SRID). A common SRID in use is 4326, which represents spatial data using longitude and latitude coordinates on the Earth's surface as defined in the WGS84 standard, which is also used for the Global Positioning System (GPS).
 
-3. Do not forget to activate the table.
+3. Activate the table.
 
 ## Result
 
-You have created 2 database tables. The tables will be used as a basis of a new RAP Business Object.
+You have created two database tables. The tables will be used as a basis of a new RAP Business Object.
 
-[Next Tutorial: Create Business Object](../bo/README.md)
+## Next Step
 
-## Further reading / Reference Links
+[Create Data Definition](../bo/README.md)
+
+## Reference Links
 
 - [Create a Simple Database Table for ABAP Environment](https://developers.sap.com/tutorials/abap-environment-create-table.html)
 - [Geodata Types](https://help.sap.com/doc/abapdocu_754_index_htm/7.54/en-US/abenddic_geo_data.htm)

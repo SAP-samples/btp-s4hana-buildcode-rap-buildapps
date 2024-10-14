@@ -1,20 +1,18 @@
-# Fill test data
+# Fill In the Test Data
 
 ## Introduction 
 
-In this chapter we will prepare the test data by creating a console class. Note that we will fill the data not to the tables directly, but we will use the business object to garantee the data consistency (remember internal geo coordinates representation!).
+In this part, you will prepare the test data by creating a console class. Note that you will fill in the data not to the tables directly, but using the business object to guarantee the data consistency (remember internal geo coordinates representation!).
 
-The business partner data will be taken from the S/4HANA Cloud Sandbox provided by **SAP Business Accelerator Hub**. You can use the same approach later to integrate your S/4HANA Cloud instance.
+The business partner data will be taken from the SAP S/4HANA Cloud Sandbox provided by **SAP Business Accelerator Hub**. You can use the same approach later to integrate your SAP S/4HANA Cloud tenant.
 
-The geo data will be taken from the list of the biggest cities in the world for every country (open data set). Later it's assumed that the geo data comes from special app (not covered yet in this tutorial).
+The geo data will be taken from the list of the biggest cities in the world for every country (open data set). Later, it's assumed that the geo data comes from a special application (not covered yet in this scenario).
 
-## Content
+## 1. Get API Metadata
 
-### Task 1: Get API metadata
+1. Open **SAP Business Accelerator Hub** in your browser at [api.sap.com](https://api.sap.com/).
 
-1. Open **SAP Business Accelerator Hub** in your browser following [this link](api.sap.com).
-
-2. Select **Login** button and log in with your SAP credentials.
+2. Choose **Login** and log in with your SAP credentials.
 
   ![login](img/hub-login.png)
 
@@ -22,23 +20,23 @@ The geo data will be taken from the list of the biggest cities in the world for 
 
   ![Search](img/hub-bupa-search.png)
 
-4. Select **Business Partners** API for **SAP S/4HANA**. You can use filter on the left side to restrict your search.
+4. Choose **Business Partners** API for **SAP S/4HANA**. You can use the filter on the left side to restrict your search.
 
   ![API](img/bupa-api.png)
 
-5. Select **API Specification** tab and then choose **Download** button in the **EDMX** section.
+5. Choose the **API Specification** tab and then choose **Download** in the **EDMX** section.
 
   ![Download EDMX](img/download-edmx.png)
 
-6. Additionally select **Show API Key** button and then select **Copy Key and Close** in the popup window. Note the copied key somewhere to use later.
+6. Additionally, choose **Show API Key** and then choose **Copy Key and Close** in the popup window. Write down the copied key somewhere to use later.
 
   ![Copy API key](img/copy-api-key.png)
 
-### Task 2: Create a service consumption model
+## 2. Create a Service Consumption Model
 
-1. Right click on your package name created in the previous exercise.
+1. Go back to ABAP Development Tools. Right-click your **ZGEO** package name.
 
-2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.
 
   ![New Object](../common-images/new-object.png) 
 
@@ -46,7 +44,7 @@ The geo data will be taken from the list of the biggest cities in the world for 
 
   ![New object type](img/new-consumption-model.png)
 
-4. Enter the following data and then choose **Next** button:
+4. Enter the following data and then choose **Next**:
 
   - **ZBUPA_CLOUD** in the **Name** field
   - **Consume Business Partner API** in the **Description** field
@@ -54,31 +52,30 @@ The geo data will be taken from the list of the biggest cities in the world for 
 
   ![Object data](img/consupmtion-model-details.png) 
 
-5. On the next screen select **Browse..** button and then select your EDMX file saved in the previous task.
+5. Choose **Browse..** and then select your EDMX file saved in the previous section.
 
 6. Enter **ZBUPA_CLOUD** in the **Class Name** field and choose **Next**.
 
   ![Class name](img/consumption-class-name.png)
 
-7. On the next screen **Components of OData Service** just choose **Next**.
+7. On the **Components of OData Service** screen, choose **Next**.
 
-8. On the next screen **ETag Support** just choose **Next**.
+8. On the **ETag Support** screen, choose **Next**.
 
-9. On the next screen select your transport (if applicable) and choose **Finish**.
+9. Select your transport (if applicable) and choose **Finish**.
 
-10. Generation of the service consumption class will take some time. After it's finished choose **Activate** button.
+10. The generation of the service consumption class will take some time. After it's finished, choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
+## 3. Create a Console Class
 
-### Task 3: Create a console class
+> NOTE: You can ommit the steps from 1 to 8 if you have already cloned your code from the GIT repository.
 
-> NOTE: You can ommit the steps from 1 to 8 if you cloned your code from GIT repository before.
+1. Right-click your **ZGEO** package name.
 
-1. Right click on your package name created in the previous exercise.
-
-2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.
 
   ![New Object](../common-images/new-object.png) 
 
@@ -93,13 +90,13 @@ The geo data will be taken from the list of the biggest cities in the world for 
 
   ![Object data](img/class-details.png) 
 
-5. On the next screen search for **if_oo_adt_classrun** interface. Select it and choose **OK** button.
+5. Search for the **if_oo_adt_classrun** interface. Select it and choose **OK**.
 
   ![Add interface](img/add-interface.png)
 
-6. Choose **Next** button.
+6. Choose **Next**.
 
-7. On the next screen select your transport (if applicable) and choose **Finish**.
+7. Select your transport (if applicable) and choose **Finish**.
 
 8. Replace the code of the class with the one below:
 
@@ -734,18 +731,18 @@ ENDCLASS.
 
 </details>
 
-9. In the line 44 replace **{YOUR_API_KEY}** with the API key that you've got before in the Task 1.
+9. In the line 44, replace **{YOUR_API_KEY}** with the API key that you've got before in the **1. Create Entity for RAP Function Input Parameters** section.
 
   ![Paste API Key](img/paste_api_key.png)
 
-10. Choose **Activate** button.
+10. Choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
-### Task 4: Fill the data
+## 4. Fill In the Data
 
-1. Right-click your class **ZCL_FILL_BUPA_TABLES** and select **Run As** &rarr; **ABAP Application (Console)** or select your class and press **F9**.
+1. Right-click your **ZCL_FILL_BUPA_TABLES** class and choose **Run As** &rarr; **ABAP Application (Console)** or select your class and press **F9**.
 
   ![Run](img/run.png)
 
@@ -764,10 +761,11 @@ Finished.
 
 ## Result
 
-You have successfully filled the database tables with the test data. Now you can test the service.
+You have successfully filled the database tables with the test data. Now, you can test the service.
 
-[Next Tutorial: Test the service](../test/README.md)
+## Next Step        
+[Test the RESTful ABAP Service](../test/README.md)
 
-## Further reading / Reference Links
+## Reference Links
 
 - [Create Your First ABAP Console Application](https://developers.sap.com/tutorials/abap-environment-console-application.html)

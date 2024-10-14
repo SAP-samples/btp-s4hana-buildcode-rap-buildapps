@@ -1,24 +1,22 @@
-# Test the service
+# Test the RESTful ABAP Service
 
 ## Introduction 
 
-In this exercise, you will test the RESTful ABAP service.
+In this part, you will test the RESTful ABAP service.
 
-## Content
+## 1. Test the Service
 
-### Task 1: Test the service
+1. Open the **ZAPI_GEO_O2** service binding in SAP ABAP Development Tools.
 
-1. Open your service binding **ZAPI_GEO_O2**
-
-2. Select **Service URL** link to open the service API in browser.
+2. Choose the **Service URL** link to open the service API in a browser.
 
   ![Service URL](img/service-url.png)
 
-3. Login when promted. You should see a service metadata in your new browser window.
+3. Log in when promted. You should see a service metadata in your new browser window.
 
   ![Metadata](img/service-metadata.png)
 
-4. Now change the URL by adding the following text right after the service ID **ZAPI_GEO_O2**. You should see 3 partners data including the geo coordinates.
+4. Change the URL by adding the following text right after the **ZAPI_GEO_O2** service ID. You should see three partners data including the geo coordinates.
 
 ~~~url
 /BusinessPartner?$expand=to_GeoData&$top=3
@@ -26,7 +24,7 @@ In this exercise, you will test the RESTful ABAP service.
 
   ![Response](img/partner-list-example.png) 
 
-5. Now change the URL by adding the following text right after the service ID **ZAPI_GEO_O2**. This will call **Get In Radius** function to show all the partners in radius 500 km around *Walldorf, Germany* (defined by geo coordinates). Make sure that your response is not empty and contains distance (in kilometers) for every found partner.
+5. Change the URL by adding the following text right after the **ZAPI_GEO_O2** service ID. This will call the **Get In Radius** function to show all the partners in radius 500 km around *Walldorf, Germany* (defined by geo coordinates). Make sure that your response is not empty and contains the distance (in kilometers) for every partner who is found.
 
 ~~~url
 /getInRadius?radius=500&point_lat='49.2896256'&point_lon='8.6409216'
@@ -36,8 +34,12 @@ In this exercise, you will test the RESTful ABAP service.
 
 ## Result
 
-You have tested your service and verified that it provides a partner list with expanded entities and can perform the function **Get In Radius**.
+You have tested your service and verified that it provides a partner list with expanded entities and can perform the **Get In Radius** function.
 
-## Further reading / Reference Links
+## Next Step        
+
+[Create destination for RESTful ABAP Service](../destination/README.md)
+
+## Reference Links
 
 - [Automated Test](https://help.sap.com/docs/abap-cloud/abap-rap/test?version=s4hana_cloud)

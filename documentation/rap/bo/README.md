@@ -2,15 +2,13 @@
 
 ## Introduction 
 
-In this exercise, you will create a business object which will represent the data model of your service.
+In this part, you will create a business object which will represent the data model of your service.
 
-## Content
+## 1. Create Root View Entity
 
-### Task 1: Create root view entity
+1. Right-click the **ZBUPA** database table created in the previous part.
 
-1. Right click on the database table **ZBUPA** created in the previous exercise.
-
-2. Choose **New Data Definition** option in the context menu.
+2. Choose **New Data Definition** in the context menu.
 
   ![New Object](img/new-root-data-definition.png) 
 
@@ -20,9 +18,9 @@ In this exercise, you will create a business object which will represent the dat
 
   ![Details](img/data-definition-details-root.png) 
 
-4. On the next screen select your transport and choose **Next**.
+4. Select your transport and choose **Next**.
 
-5. On the next screen select the **Define Root View Entity** template and then choose **Finish**.
+5. Choose the **Define Root View Entity** template and then choose **Finish**.
 
   ![Template](img/root-data-definition-template.png) 
 
@@ -42,18 +40,18 @@ composition [0..1] of ZI_BusinessPartnerGeo as _GeoData
 }
 ~~~
 
-> Note that the code has errors. It is ok now, we have to create another view first.
+> Note that the code has errors. It is ok now, you have to create another view first.
 
-7. Choose **Save** button.
+7. Choose **Save**.
    
   ![Alt text](../common-images/save-button.png)
 
 
-### Task 2: Create geo location view entity
+## 2. Create Geo Location View Entity
 
-1. Right click on the database table **ZBUPAGEO** created in the previous exercise.
+1. Right-click the **ZBUPAGEO** database table created in the previous part.
 
-2. Choose **New Data Definition** option in the context menu.
+2. Choose **New Data Definition** in the context menu.
 
   ![New Object](img/new-data-definition.png) 
 
@@ -63,9 +61,9 @@ composition [0..1] of ZI_BusinessPartnerGeo as _GeoData
 
   ![Details](img/data-definition-details.png) 
 
-4. On the next screen select your transport and choose **Next**.
+4. Select your transport and choose **Next**.
 
-5. On the next screen select the **Define View Entity** template and then choose **Finish**.
+5. Choose the **Define View Entity** template and then choose **Finish**.
 
   ![Template](img/data-definition-template.png) 
 
@@ -93,29 +91,31 @@ association to parent ZI_BusinessPartner as _BusinessPartner on $projection.Part
 }
 ~~~
 
-7. Choose **Save** button.
+7. Choose **Save**.
    
   ![Alt text](../common-images/save-button.png)
 
 
-## Task 3: Activate the views
+## 3. Activate the Views
 
-1. Select **Activate inactive ABAP development objects** button.
+1. Choose **Activate inactive ABAP development objects**.
 
   ![Activate all](../common-images/activate-all-button.png)
 
-2. In the popup window choose both new CDS views and then choose **Activate** button.
+2. In the popup window, select the two new CDS views and then choose **Activate**.
 
   ![Activate objects](img/activate-views.png)
 
 
 ## Result
 
-You have created a business object. This object could be now ready to be exposed as a service. But we will add projection layer for more flexibility in future.
+You have created a business object. This object is now ready to be exposed as a service. You will add a projection layer for more flexibility in future.
 
-[Next Tutorial: Create projection views](../projection/README.md)
+## Next Step
 
-## Further reading / Reference Links
+[Create Business Object Projections](../projection/README.md)
+
+## Reference Links
 
 - [Naming convention](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/8b8f9d8f3cb948b2841d6045a255e503.html)
 - [Developing Managed Transactional Apps](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/b5bba99612cf4637a8b72a3fc82c22d9.html)

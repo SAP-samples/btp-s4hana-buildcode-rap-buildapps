@@ -1,28 +1,24 @@
-# Add behavior artifacts
+# Add Behavior Artifacts
 
 ## Introduction 
 
 To specify the business object's behavior, the behavior definition as the corresponding development object is used. A business object behavior definition (behavior definition for short) is an ABAP Repository object that describes the behavior of a business object in the context of the ABAP RESTful application programming model. A behavior specifies the operations and field properties of an individual business object in the ABAP RESTful programming model.
 
-We will use a managed implementation type of the RAP object. It addresses use cases where all essential parts of an application must be developed from scratch. However, these new applications can highly benefit from out-of-the-box support for transactional processing. Standard operations (create, update, delete) must only be specified in the behavior definition to obtain a ready-to-run business object. The technical implementation aspects are taken over by the managed RAP BO provider. The interaction phase and the save sequence are implemented generically. The corresponding transactional engine manages the entire life cycle of your business object and covers all aspects of your business application development. As application developers we only need to focus on business logic that is implemented using actions, validations and determinations and user interaction. 
+You will use a managed implementation type of the RAP object. It addresses use cases where all essential parts of an application must be developed from scratch. However, these new applications can highly benefit from out-of-the-box support for transactional processing. Standard operations (create, update, delete) must only be specified in the behavior definition to obtain a ready-to-run business object. The technical implementation aspects are taken over by the managed RAP business object provider. The interaction phase and the save sequence are implemented generically. The corresponding transactional engine manages the entire lifecycle of your business object and covers all aspects of your business application development. As an application developer, you only need to focus on business logic that is implemented using actions, validations and determinations, and user interaction. 
 
-Our additional business logic will include 2 methods:
+The additional business logic will include two methods:
 
-- The first one is a RAP determination **setGEOPoint** which will convert the coordinates to the internal representation on any modify operation.
+- The first one is the **setGEOPoint** RAP determination which will convert the coordinates to the internal representation on any modify operation.
 
-- The second one is OData function **getInRadius** which will return the partner list within a radius around some point specified with a latitude and a longitude. For this RAP function we have to define dictionary artifacts (CDS abstract entities) used as input and output parameters. 
+- The second one is the **getInRadius** OData function which will return the partner list within a radius around some point specified with a latitude and a longitude. For this RAP function, you have to define dictionary artifacts (CDS abstract entities) used as input and output parameters. 
 
-At the end we have to create a projection for the behavior definition. The projection can restrict the existing behavior, but we leave it as it is.
+Finally, you have to create a projection for the behavior definition. The projection can restrict the existing behavior, but you will leave it as it is.
 
+## 1. Create Entity for RAP Function Input Parameters
 
-## Content
+1. Right-click your **ZGEO** package name.
 
-
-### Task 1: Create entity for RAP function input parameters
-
-1. Right click on your package name created in the previous exercise.
-
-2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.
 
   ![New Object](../common-images/new-object.png) 
 
@@ -37,9 +33,9 @@ At the end we have to create a projection for the behavior definition. The proje
 
   ![Details](img/input-view-details.png) 
 
-5. On the next screen select your transport and choose **Next**.
+5. Select your transport and choose **Next**.
 
-6. On the next screen select the **Define Abstract Entity with Parameters** template and then choose **Finish**.
+6. Choose the **Define Abstract Entity with Parameters** template and then choose **Finish**.
 
   ![Template](img/abstract-entity-template.png) 
 
@@ -55,16 +51,16 @@ define abstract entity ZD_GEO_PARAMETERS
 }
 ~~~
 
-8. Choose **Save** button.
+8. Choose **Activate**.
    
-  ![Save](../common-images/save-button.png)
+  ![Save](../common-images/activate-button.png)
 
 
-### Task 2: Create entity for RAP function output parameters
+## 2. Create Entity for RAP Function Output Parameters
 
-1. Right click on your package name created in the previous exercise.
+1. Right-click your **ZGEO** package name.
 
-2. Choose **New** &rarr; **Other ABAP Repository Object** option in the context menu.
+2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.
 
   ![New Object](../common-images/new-object.png) 
 
@@ -79,9 +75,9 @@ define abstract entity ZD_GEO_PARAMETERS
 
   ![Details](img/output-view-details.png) 
 
-5. On the next screen select your transport and choose **Next**.
+5. Select your transport and choose **Next**.
 
-6. On the next screen select the **Define Abstract Entity with Parameters** template and then choose **Finish**.
+6. Choose the **Define Abstract Entity with Parameters** template and then choose **Finish**.
 
   ![Template](img/abstract-entity-template.png) 
 
@@ -99,14 +95,14 @@ define abstract entity ZD_GETINRADIUS_RESULT
 }
 ~~~
 
-8. Choose **Save** button.
+8. Choose **Activate**.
    
-  ![Save](../common-images/save-button.png)
+  ![Save](../common-images/activate-button.png)
 
 
-### Task 3: Create behavior definition
+## 3. Create Behavior Definition
 
-1. Right click on your main CDS view **ZI_BUSINESSPARTNER**.
+1. Right-click your main **ZI_BUSINESSPARTNER** CDS view.
 
 2. Choose **New Behavior Definition** in the popup menu.
 
@@ -119,7 +115,7 @@ define abstract entity ZD_GETINRADIUS_RESULT
 
   ![Details](img/definition-details.png) 
 
-4. On the next screen select your transport and choose **Finish**.
+4. Select your transport and choose **Finish**.
 
 5. Replace the code of the behavior definition with the one below:
 
@@ -172,19 +168,18 @@ authorization dependent by _BusinessPartner
 }
 ~~~
 
-6. Choose **Activate** button.
+6. Choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
+## 4. Create Behavior Implementation
 
-### Task 4: Create behavior implementation
-
-1. Put your cursor on **zbp_i_businesspartner** class in the code of your behavior definition.
+1. Put your cursor on the **zbp_i_businesspartner** class in the code of your behavior definition.
 
 2. Press **Ctrl+1** (or select **Quick Fix** option from the context menu after a right click)
 
-3. Choose **Create behavior implementation class zbp_i_businesspartner** option in the popup menu.
+3. Choose **Create behavior implementation class zbp_i_businesspartner** in the popup menu.
 
   ![Quick Fix](img/quick-fix.png)
 
@@ -194,7 +189,7 @@ authorization dependent by _BusinessPartner
 
   ![Details](img/implementation-details.png) 
 
-5. On the next screen select your transport and choose **Finish**.
+5. Select your transport and choose **Finish**.
 
 6. Replace the code of the behavior definition with the one below:
 
@@ -294,16 +289,16 @@ CLASS lhc_ZI_BusinessPartner IMPLEMENTATION.
 ENDCLASS.
 ~~~
 
-> We use EML in the method implementation part. The Entity Manipulation Language (EML) is a part of the ABAP language that enables access to RAP business objects. 
+> You use EML in the method implementation part. The Entity Manipulation Language (EML) is a part of the ABAP language that enables access to RAP business objects. 
 
-7. Choose **Activate** button.
+7. Choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
-### Task 5: Create projection for behavior definition
+## 5. Create Projection for Behavior Definition
 
-1. Right click on your main CDS projection view **ZC_BUSINESSPARTNER**.
+1. Right-click your main **ZC_BUSINESSPARTNER** CDS projection view.
 
 2. Choose **New Behavior Definition** in the popup menu.
 
@@ -316,7 +311,7 @@ ENDCLASS.
 
   ![Details](img/definition-projection-details.png) 
 
-4. On the next screen select your transport and choose **Finish**.
+4. Select your transport and choose **Finish**.
 
 5. Replace the code of the behavior definition with the one below:
 
@@ -344,18 +339,20 @@ define behavior for ZC_BusinessPartnerGeo
 }
 ~~~
 
-6. Choose **Activate** button.
+6. Choose **Activate**.
    
   ![Activate](../common-images/activate-button.png)
 
 
 ## Result
 
-We have created behavior for the business object. The behavior adds additional business logic to the object and enriches its functionality. Now it's time to fill the test data to the database tables.
+You have created the behavior for the business object. The behavior adds additional business logic to the object and enriches its functionality. Now it's time to fill the test data to the database tables.
 
-[Next Tutorial: Fill test data](../fill-data/README.md)
+## Next Step
 
-## Further reading / Reference Links
+[Fill In the Test Data](../fill-data/README.md)
+
+## Reference Links
 
 - [CDS Abstract Entities](https://help.sap.com/docs/abap-cloud/abap-data-models/cds-abstract-entities)
 - [Business Object](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/a3ff9dcdb25a4f1a9408422b8ba5fa00.html)

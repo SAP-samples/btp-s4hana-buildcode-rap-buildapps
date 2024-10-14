@@ -1,33 +1,39 @@
 # Enhance the Sample Data Using Joule
 
-Joule created the CAP data model and the OData service. In addition, Joule created some sample data by default. We will now ask Joule to provide additional sample data.
+Joule created the CAP data model and the OData service. In addition, Joule created some sample data by default. Now, ask Joule to provide additional sample data.
 
-1. Choose **Guide** -> **Sample Data** -> **Generate Sample Data**.
+1. Choose **Joule** > **/cap-gen-data Generate CAP sample data**.
 
-![](./images/guide.png)
+  ![](./images/joule-generate-data.png)
 
-2. Choose **Open Joule**. You will find Joule open wih default prompt **Generate sample data**. Choose **generate**.
+2. Enter the following prompt and then choose **Send** icon.
 
-![](./images/openjoule.png)
+```
+Generate sample data with at least 5 incidents and 5 devices for medical equipment maintenance application. For the Status entity add only 3 statuses: New (code N), Assigned (code A), Closed (code C). For the Urgency entity add only 3 urgencies: Low (code L), Medium (code M), High (code H). For medical devices data use sample medical devices names.
+```
 
-3. Accept the default prompt **generated sample data**.This will add the data in all entity.
+  ![](./images/joule-prompt.png)
 
-![](./images/acceptdata.png)
+3. Accept the generated data. This will add the data in all entities.
 
-4. Open **Medicaldevice** entity. You will notice how Ai powered joule return perfect medical equipment.
+  ![](./images/acceptdata.png)
 
-![](./images/medical.png)
+4. Open the **Medicaldevice** entity. You will notice how AI-powered Joule returns a perfect medical equipment.
 
-5. Modify the Status **Code** and **Description** by refering below screenshot.
+  ![](./images/medical.png)
 
-![](./images/adaptstatuscode.png)
+5. Check the Status **Code** and **Description** by refering the following screenshot. Change if necessary.
 
-6. Modify the Urgency **Code** and **Description** by refering below screenshot.
+  ![](./images/adaptstatuscode.png)
 
-![](./images/adapturgency.png)
+6. Check the Urgency **Code** and **Description** by refering the following screenshot. Change if necessary.
 
-7. Modify the Incident Status and Urgency **Code** by refering below screenshot.
+  ![](./images/adapturgencycode.png)
 
-![](./images/adaptincident.png)
+7. The sample data will never be used during the deployment. In the production scenarios you should use initial data if necessary. In this tutorial we can move the generated sample data to the inital data for demonstration purposes. Open **Explorer** and move all 5 CSV files from the *test/data* folder to the *db/data* folder.
 
-[Next: Create Application Logic with Joule](../applogic/README.md)
+  ![](./images/initial-data.png)
+
+## Next Step
+
+[Create Application Logic with Joule](../applogic/README.md)

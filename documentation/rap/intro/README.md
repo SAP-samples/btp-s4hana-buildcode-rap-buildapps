@@ -1,28 +1,30 @@
 # Introduction
 
-In this part of the mission we will create an API service which will provide the data for the available incident processors. The data includes ID, name and geo location of the processors.
+In this part of the mission, you create an API service which will provide the data for the available incident processors. The data includes ID, name and geo location of the processors.
 
-In this scenario we assume that main information about the incident processors (like ID and name) is coming from S/4HANA Cloud (Business Partners data). For the simplicity reasons this data will be uploaded only once. In real productive scenarios there should be some more comprehensive integration. To reproduce this tutorial you don't need an access to the real S/4HANA Cloud system as we will use SAP Business Accelerator Hub Sandbox.
+Let's assume that the main information about the incident processors (like ID and name) is coming from an SAP S/4HANA Cloud system (Business Partners data). For simplicity, this data will be uploaded only once. In real productive scenarios there should be some more comprehensive integration. To reproduce this scenario, you don't need an access to a real SAP S/4HANA Cloud system as you will use the SAP Business Accelerator Hub Sandbox.
 
-The geo coordinates for the processors will be assigned randomly. It is assumed that later there could be some additional application which updates actual location of a processor.
+The geo coordinates for the processors will be assigned randomly. It is assumed that later on there could be some additional application which updates the actual location of a processor.
 
-## Task 1: Prepare Landscape
+## 1. Prepare the Landscape
 
-To start this part of the tutorial you will need SAP Subaccount with the SAP BTP ABAP Environment service. You can get a trial subaccount for this reason. Follow this [guide](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html) to proceed.
+To start this part of the scenario, you need a subaccount in SAP BTP with the SAP BTP, ABAP Environment enabled. You can also use a trial account in SAP BTP. See the [Create an SAP BTP ABAP Environment Trial User](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html) tutorial.
 
-Alternatively you can use your own subaccount. Make sure that you have necessary [quotas and subscriptions](https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/getting-started-in-abap-environment).
+Alternatively, you can use your own subaccount. Make sure that you have the necessary quotas and subscriptions. See [Getting Started in the ABAP Environment](https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/getting-started-in-abap-environment).
 
-## Task 2: Create ABAP Project
+## 2. Create an ABAP Project
 
-After your subaccount is ready you have to prepare your workspace in ABAP Development tools environment. Follow this [guide](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html).
+After your subaccount is ready, you have to prepare your workspace in the ABAP Development Tools. See the [Create an ABAP Cloud Project](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html) tutorial.
 
 ## Result
  
-You have prepared a SAP BTP Subaccount with the SAP BTP ABAP Environment service and created a workspace in ABAP Development Tools environment. Now you are ready to develop the API.
+You have prepared a subaccount in SAP BTP with the SAP BTP, ABAP Environment and created a workspace in the ABAP Development Tools. Now, you are ready to develop the API.
 
-[Next Tutorial: Create package](../package/README.md)
+## Next Step
 
-## Further reading / Reference Links
+[Create Package](../package/README.md)
+
+## Reference Links
 
 - [Trial Accounts and Free Tier](https://help.sap.com/docs/btp/sap-business-technology-platform/trial-accounts-and-free-tier)
-- [SAP BTP, ABAP environment](https://help.sap.com/docs/sap-btp-abap-environment)
+- [SAP BTP, ABAP Environment](https://help.sap.com/docs/sap-btp-abap-environment)

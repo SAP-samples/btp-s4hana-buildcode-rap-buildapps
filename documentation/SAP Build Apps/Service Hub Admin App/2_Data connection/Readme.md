@@ -1,4 +1,4 @@
-# Module 3 - Unit 2_2: Data connection
+# Data Connection
 
 1. Go to **Data** tab. Then choose **Add integration**.
 
@@ -8,11 +8,11 @@
 
 ![](../screenshots/Picture58.png)
 
-3. Find the BTP destination that you created using SAP Build Code: **Build-Code**.
+3. Find the destination **equipmentmaintenance-equipmentmaintenanceSrv** that has been created via SAP Build Code (see [here](../../../buildcode/deploy/README.md)).
 
 ![](../screenshots/Picture59.png)
 
-4.Choose **Install Integration**.
+4. Choose **Install Integration**.
 
 ![](../screenshots/Picture60.png)
 
@@ -60,7 +60,7 @@
 14. Paste the formula below and then choose **Save**.
 
 ~~~
-"/getInRadius?radius="+query.additionalInputs.radius+"&point_lat='"+query.additionalInputs.pointLat+"'&point_lon='"+query.additionalInputs.pointLon+"'"
+"/getInRadius?radius="+query.additionalInputs.radius+"&point_lat='"+query.additionalInputs.point_lat+"'&point_lon='"+query.additionalInputs.point_lon+"'"
 ~~~
 
 ![](../screenshots/Picture70.png)
@@ -94,4 +94,6 @@
 ![](../screenshots/Picture77.png)
 
 
-**[Next Module 3 - Unit 2_3: Configuration for UI Components in Overview Pages](../3_Configuration%20for%20UI%20Components%20in%20Overview%20Pages/Readme.md) >**
+## Next Step
+
+[Configuration for UI Components in Overview Pages](../3_Configuration%20for%20UI%20Components%20in%20Overview%20Pages/Readme.md)

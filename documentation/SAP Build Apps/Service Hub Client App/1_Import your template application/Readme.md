@@ -1,37 +1,37 @@
-# Module 3 - Unit 1_1: Import your template application 
+# Import Your Template Application 
 
-1. Download the template application and save it to your PC
+1. Download the template application and save it locally.
 
-![Project File](./Service%20Hub%20Client_UI%20Template.mtar)
+    [Project File](./Service%20Hub%20Client_UI%20Template.mtar)
 
-2. Select **Import** button in SAP Build Lobby.
+2. In the SAP Build Lobby, choose **Import**.
 
 ![](/documentation/SAP%20Build%20Apps/Service%20Hub%20Admin%20App/screenshots/Picture177.png)
 
-3. Select **Browse Files** and find the template that you saved to your PC: **Service Hub Client_UI Template.mtar**
+3. Choose **Browse Files** and find the **Service Hub Client_UI Template.mtar** template that you saved locally.
 
 ![](/documentation/SAP%20Build%20Apps/Service%20Hub%20Admin%20App/screenshots/Picture178.png)
 
-4. Select the project and choose **Import** button.
+4. Select the project and choose **Import**.
 
 ![](../screenshots/Picture201.png)
 
-5. Choose **Rename Project** item in the project menu. 
+5. Choose **Rename Project** in the project menu. 
 
 ![](../screenshots/Picture202.png)
 
-6.  Enter a name (e.g. **Service Hub Client**) and then choose **Save** button.
+6.  Enter a name, for example **Service Hub Client**, and then choose **Save**.
 
 ![](../screenshots/Picture203.png)
 
-7. Go to your project by selecting it's name.
+7. Go to your project by selecting its name.
 
 ![](../screenshots/Picture204.png)
 
-8. Make sure to have **Fullscreen** view from the preview options 
+8. Make sure to have the **Fullscreen** view switched on.
 
 ![](../screenshots/Picture205.png)
 
+## Next Step
 
-
-**[Next Module 3 - Unit 1_2: Data connection](../2_Data%20connection/Readme.md) >**
+[Data Connection](../2_Data%20connection/Readme.md)

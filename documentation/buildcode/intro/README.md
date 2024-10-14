@@ -1,52 +1,59 @@
-# Introduction into SAP Build Code
+# Introduction to SAP Build Code
 
-SAP Build Code is a turnkey development environment that combines runtime and design-time capabilities with built-in solutions for DevOps and Application Lifecycle Management.
+SAP Build Code is a turnkey development environment that combines runtime and design-time capabilities with built-in solutions for DevOps and application lifecycle management.
 
-![](./images/intro.png)
+  ![](./images/intro.png)
 
 ## Benefits of SAP Build Code
 
-- Achieve a clean core by developing side-by-side extensions with SAP Build Code
+Thanks to SAP Build Code, you can: 
+
+- Achieve a clean core by developing side-by-side extensions
 - Optimize developer efficiency with generative AI, productivity tools, and application lifecycle management
-- Enables developers to build and extend powerful end-to-end business applications with programming language of choice
+- Build and extend powerful end-to-end business applications with programming language of choice
 - Leverage interoperability between classic development and low-code development tools 
 
-## Key capabilities of SAP Build Code
+## Key Capabilities of SAP Build Code
 
-- Differentiate cloud solution with stable and future-proof foundation, solution becomes future proof and works with different editions of S/4HANA, and quality assurance options included
-- Enable developers to code faster and smarter, code generation based on generative AI, Ease of Application Lifecycle Management 
-- Application and extension development, Integrate with SAP and non-SAP systems
-- Easy access for all types of developers with centralized Lobby, for Fusion Development
+- Enable developers to code faster and smarter, generate code from natural language descriptions using generative AI 
+- Build extension applications, and integrate them with SAP and non-SAP systems
+- Use the centralized Lobby for fusion development
 
 # Create a New Project Using SAP Build Code
 
-1. Navigate to the SAP Build lobby.
+1. Navigate to the SAP Build Lobby and choose **Create**.
 
-2. Click Create to start the creation process.
-![](./images/create.png)
+  ![](./images/create.png)
 
-3. Click the Build an Application tile.
-![](./images/buildapp.png)
+2. Choose the **Build an Application** tile.
 
-4. Click the **SAP Build Code** tile to develop your project in SAP Business Application Studio, the SAP Build Code development environment, leveraging the capabilities of the services included in SAP Build Code.
-![](./images/buildcode.png)
+  ![](./images/buildapp.png)
 
-5. Click the Full-Stack Application tile. 
-![](./images/fullstack.png) 
+3. Choose the **SAP Build Code** tile to develop your project in SAP Business Application Studio, the SAP Build Code development environment, leveraging the capabilities of the services included in SAP Build Code.
 
-6. In name field of your project, enter **incidentmanagement**.
+  ![](./images/buildcode.png)
 
-7. Select the dev space where you want the project to reside.
+4. Choose the **Full-Stack Application** tile. 
 
-8. Click **Create**.
-![](./images/projectinfo.png)
+  ![](./images/fullstack.png) 
 
-> You can see the project being created in the Project table of the lobby.
+5. In **Project Name** field, enter **equipmentmaintenance**.
 
-9. After you see a message stating that the project has been created successfully, click the project to open it.
-![](./images/projectopen.png)
+6. Select the dev space where you want the project to reside.
+
+7. Choose **Create**.
+
+  ![](./images/projectinfo.png)
+
+> You can see the project being created in the **All Projects** table of the lobby.
+
+8. After you see a message stating that the project has been created successfully, choose the project to open it.
+
+  ![](./images/projectopen.png)
 
 The project opens in SAP Business Application Studio, the SAP Build Code development environment.
 
-[Next: Create Data Entities with Joule](../dataentity/README.md)
+## Next Step
+
+[Create Data Entities with Joule](../dataentity/README.md)
 
