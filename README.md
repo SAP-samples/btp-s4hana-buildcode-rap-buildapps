@@ -1,4 +1,4 @@
-# Mastering SAP S/4HANA Extension with SAP Build, SAP Build Code and SAP BTP ABAP 
+# Mastering SAP S/4HANA Extension with SAP Build
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-s4hana-buildcode-rap-buildapps)](https://api.reuse.software/info/github.com/SAP-samples/btp-s4hana-buildcode-rap-buildapps)
 ## Description
 This scenario showcases the integration of a mobile application developed using SAP Build Apps with two backend services: SAP Build Code with Joule (CAP) and ABAP RESTful Application Programming Model (RAP). The mobile application, created with a no-code approach, interacts seamlessly with CAP and RAP backend services, offering advanced functionalities and data access.
