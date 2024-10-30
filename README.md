@@ -21,7 +21,7 @@ The tutorial focuses on building **Fusion Application** on where professional an
 
 ![](./documentation/images/rap.png)
 
-3. Build and deploy a mobile application using [SAP Build](https://www.sap.com/products/technology-platform/low-code.html)
+3. Build and deploy a mobile application using [SAP Build Apps](https://www.sap.com/products/technology-platform/low-code.html)
 
 ![](./documentation/images/build.png)
 
