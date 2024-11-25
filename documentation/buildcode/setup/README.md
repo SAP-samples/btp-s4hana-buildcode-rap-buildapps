@@ -20,7 +20,9 @@ You have a trial or an enterprise SAP BTP global account. In case of the trial a
 
 > The booster checks for required authorizations, compatible providers, and regions, as prerequisites for a successful execution.
 
-4. After running the booster, in the popup window, choose **Navigate to Subaccount**.
+4. There may be an option to create a new subaccount or select the existing one. Just choose what suits your needs.
+
+5. After running the booster, in the popup window, choose **Navigate to Subaccount**.
 
   ![](./images/navigate.png)
 
