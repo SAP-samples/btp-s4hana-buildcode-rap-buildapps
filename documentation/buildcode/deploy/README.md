@@ -4,7 +4,22 @@ The last step in SAP Build Code is to deploy the application in the SAP BTP, Clo
 
 ## Prerequisites
 
-You should have an SAP HANA Cloud instance in your subaccount. See the [Set Up the SAP HANA Cloud Service](https://developers.sap.com/tutorials/btp-app-hana-cloud-setup.html#3b20e31c-e9eb-44f7-98ed-ceabfd9e586e) tutorial.
+To deploy the application in Cloud Foundry environment you should have a Cloud Foundry space in your subaccount. If you don't have it yet, follow this [documentation](https://help.sap.com/docs/btp/sap-business-technology-platform/creating-cloud-foundry-organization-and-space?version=Cloud).
+
+You should have an SAP HANA Cloud instance in your subaccount. See the [Provision an Instance of SAP HANA Cloud, SAP HANA Database](https://developers.sap.com/tutorials/hana-cloud-mission-trial-3.html) tutorial. 
+
+Remember that your [database instance should be available](https://help.sap.com/docs/hana-cloud/sap-hana-cloud-administration-guide/sap-hana-instance-mapping) from your Cloud Foundry space. You can do it during DB instance creation like shown here:
+
+  ![](./images/cf-map-during-creation.png)
+
+Or later in configuration:
+
+  ![](./images/cf-map-in-configuration.png)
+
+The Cloud Foundry Org Id can be found in the subaccount overview:
+
+  ![](./images/cf-org-id.png)
+
 
 ## 1. Deploy the Application
 
@@ -30,7 +45,9 @@ You should have an SAP HANA Cloud instance in your subaccount. See the [Set Up t
 
 1. Go to your subaccount and choose **HTML5 Applications**. You will see the Equipment Maintenance application. 
 
-> Most probably you will need to subscribe to SAP Build Work Zone to access the applications. Follow the documentation provided if you don't see the applications list.
+> Most probably you will need to subscribe to SAP Build Work Zone to access the applications. Follow the documentation provided if you don't see the applications list (for example subscribe to SAP Build Workzone, standard edition).
+> 
+> ![](./images/workzone-docu-links.png)
 
   ![](./images/webapp.png)
 

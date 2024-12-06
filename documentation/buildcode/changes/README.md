@@ -20,6 +20,10 @@ In the Equipment Maintenance application, we will remove ID for both **Status** 
 
   ![](./images/codekey.png)
 
+6. Accept the changes with the **Save** button.
+
+  ![](./images/save-changes.png)
+
 Repeat the steps for the **Urgency** model as well. The final look of schema for both data models should look like this:
 
   ![](./images/both.png)

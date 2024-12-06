@@ -28,6 +28,8 @@ The Equipment Maintenance sample application serves as a read-mode application. 
 
 ## Add a Projection of **Conversation** to the Incident Service
 
+If you don't have Conversation entity in your service scheme, then you have to add it.
+
 1. Choose **service.cds** file and make sure that it's open in graphical modeler.
 
     ![](./images/explorer.png)
