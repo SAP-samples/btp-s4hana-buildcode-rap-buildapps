@@ -4,7 +4,7 @@
 
 In this part, you will prepare the test data by creating a console class. Note that you will fill in the data not to the tables directly, but using the business object to guarantee the data consistency (remember internal geo coordinates representation!).
 
-The business partner data will be taken from the SAP S/4HANA Cloud Sandbox provided by **SAP Business Accelerator Hub**. You can use the same approach later to integrate your SAP S/4HANA Cloud tenant.
+The business partner data will be taken from the SAP S/4HANA Sandbox provided by **SAP Business Accelerator Hub**. You can use the same approach later to integrate your SAP S/4HANA tenant.
 
 The geo data will be taken from the list of the biggest cities in the world for every country (open data set). Later, it's assumed that the geo data comes from a special application (not covered yet in this scenario).
 
