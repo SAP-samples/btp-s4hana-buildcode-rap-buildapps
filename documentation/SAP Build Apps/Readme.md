@@ -2,6 +2,8 @@
 
 In this module, you will be creating **two applications** using SAP Build Apps.
 
+To start working with SAP Build Apps you need to subscribe. Follow [this tutorial](https://developers.sap.com/tutorials/build-apps-trial-booster..html) if you use trial account. Alternatively read the configuration steps in the [official documentation](https://help.sap.com/docs/build-apps/service-guide/prerequisites).
+
 **[Service Hub Client Application](./Service%20Hub%20Client%20App/Readme.md)** where clients can report new incidents 
 1.  [Import Your Template Application](./Service%20Hub%20Client%20App/1_Import%20your%20template%20application/Readme.md)
 2.  [Data Connection](./Service%20Hub%20Client%20App/2_Data%20connection/Readme.md)

@@ -2,7 +2,7 @@
 
 In this part, you will integrate the destination in SAP BTP that you have created in SAP Build Code. 
 
-1. Go to the **Auth** tab and choose **Enable Authentication**.
+1. Go to the **App Settings**>**Authentication** tab and choose **Enable Authentication**.
 
 ![](../screenshots/Picture10.png)
 
@@ -18,7 +18,7 @@ In this part, you will integrate the destination in SAP BTP that you have create
 
 ![](../screenshots/Picture13.png)
 
-5. Find the destination **equipmentmaintenance-equipmentmaintenanceSrv** that has been created via SAP Build Code (see [here](../../../buildcode/deploy/README.md)).
+5. Choose the destination **equipmentmaintenance-equipmentmaintenanceSrv** that has been created via SAP Build Code (see [here](../../../buildcode/deploy/README.md)).
 
 ![](../screenshots/Picture14.png)
 
@@ -32,8 +32,6 @@ In this part, you will integrate the destination in SAP BTP that you have create
 
 8. Select the **Medicaldevice** data entity and then choose **Enable Data Entity**.
 
-![](../screenshots/Picture17.png)
-
 9. Choose **Browse real data**. 
 
 ![](../screenshots/Picture18.png)
@@ -42,7 +40,7 @@ In this part, you will integrate the destination in SAP BTP that you have create
 
 ![](../screenshots/Picture19.png)
 
-11. Save your project and go to **UI Canvas**.
+11. Save your project and go to **Variables**.
 
 ![](../screenshots/Picture20.png)
 
@@ -58,11 +56,15 @@ In this part, you will integrate the destination in SAP BTP that you have create
 
 ![](../screenshots/Picture23.png)
 
-15. Add a new data variable by choosing **Medicaldevice**.
+15. In the same way add a new data variable by choosing **Medicaldevice**. This time leave the **Data variable type** as by default: **Collection of data records**.
 
 ![](../screenshots/Picture24.png)
 
-16. Switch back to **View**. Save your project.
+16. Make sure that the name of the variable is `Medicaldevice1` considering the capital letters (not e.g. `MedicalDevice1` or something else). It's important, because it will be used in the formula later. Change the name if you have it different.
+
+![](../screenshots/Picture24a.png)
+
+17. Save your project.
 
 ![](../screenshots/Picture25.png)
 

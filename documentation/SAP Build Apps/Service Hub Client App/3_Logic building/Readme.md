@@ -1,6 +1,6 @@
 # Build the Application Logic 
 
-You can see that each input field in the form that you have imported using application template has a value that is already bounded. Here is an example of the first input field (Title) that is bounded to Incidents1.title. That means that the value of the title will be saved into this data variable after a user's input.
+In the **User Interface** tab you can see that each input field in the form that you have imported using application template has a value that is already bounded. Here is an example of the first input field (Title) that is bounded to Incidents1.title. That means that the value of the title will be saved into this data variable after a user's input.
 
 ![](../screenshots/Picture26.png)
 
@@ -157,8 +157,6 @@ STRING(sensorVars.geolocation.latestValue.longitude)
 ![](../screenshots/Picture62.png)
 
 34. Save your project.
-
-![](../screenshots/Picture63.png)
 
 You have successfully completed the application! 
 
