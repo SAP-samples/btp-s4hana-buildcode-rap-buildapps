@@ -91,8 +91,6 @@
 
 21. **Save** your project.
 
-![](../screenshots/Picture77.png)
-
 
 ## Next Step
 

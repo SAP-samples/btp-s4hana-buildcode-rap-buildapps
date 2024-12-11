@@ -1,13 +1,13 @@
 # Configuration for UI and Logic Components in Detail Page
 
 
-1. Make sure that you are on the **Incident Detail** page and you are in the **UI Canvas** view. Open the **Logic Editor** tab.
+1. Make sure that you are on the **Incident Detail** page and you are in the **User Interface** view. No screen component should be selected. Open the **Logic Editor** tab.
 
 ![](../screenshots/Picture108.png)
 
 2. Select the first **Set page variable** logic component and choose the **ABC** icon under **Assigned value**. Follow the path: **Data and Variables** > **Data Variable** > **Incidents1**.
 
-> Make sure that the **Logic Editor** tab is showing **Page:Incident Detail** (that is shown with the red arrow below). This means you are in the **Logic Editor** for the whole page, not for any single UI component. 
+> Make sure that the **Logic Editor** tab is showing **Page: Incident Detail** (that is shown with the red arrow below). This means you are in the **Logic Editor** for the whole page, not for any single UI component. 
 
 ![](../screenshots/Picture109.png)
 

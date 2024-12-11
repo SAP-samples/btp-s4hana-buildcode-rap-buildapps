@@ -20,7 +20,7 @@
 
 ![](../screenshots/Picture82.png)
 
-6. Select **incident_ID** from the **Property** dropdown list. Then, choose the **ABC** button under **Compared value** and follow the path: **Data and Variables** > **Page parameter**.
+6. Choose **Add condition**. Select **incident_ID** from the **Property** dropdown list. Then, choose the **ABC** button under **Compared value** and follow the path: **Data and Variables** > **Page parameter**.
 
 ![](../screenshots/Picture83.png)
 
@@ -59,7 +59,7 @@
 
 ![](../screenshots/Picture90.png)
 
-14. Choose **Get record collection**. Select the **X** button under **radius** and follow the path: **Data and Variables** > **Page variable**.
+14. Choose **Get record collection**. Make sure that selected resource data is **BPData**. Select the **X** button under **radius** and follow the path: **Data and Variables** > **Page variable**.
 
 ![](../screenshots/Picture91.png)
 
@@ -75,27 +75,23 @@
 
 ![](../screenshots/Picture94.png)
 
-18. Choose the **X** button under **point_lon** and follow the path: **Data and Variables** > **Data variable**.
+18. Do the same steps for the parameter **point_lon** and assign it to the **Incidents1.longitude** field.
 
 ![](../screenshots/Picture95.png)
 
-19. Choose **longitude** and then choose **Save**.
-
-![](../screenshots/Picture96.png)
- 
-20. Choose the **Set data variable** node. Go to the bound field under **Data variable name**.
+19. Choose the **Set data variable** node. Go to the bound field under **Data variable name**.
 
 ![](../screenshots/Picture97.png)
 
-21. Select the **BPData1** data variable.
+20. Select the **BPData1** data variable.
 
 ![](../screenshots/Picture98.png)
 
-22. Choose the **{}** icon under **data** and then choose **Formula**.
+21. Choose the **{}** icon under **data** and then choose **Formula**.
 
 ![](../screenshots/Picture99.png)
 
-23. Paste the formula below. This formula will get the output from the **Get record collection** component and save it to **BPData1**.
+22. Paste the formula below. This formula will get the output from the **Get record collection** component and save it to **BPData1**.
 
 ~~~
 outputs["Get record collection"].records
@@ -103,15 +99,15 @@ outputs["Get record collection"].records
 
 ![](../screenshots/Picture100.png)
 
-24. Choose the **If condition** node. Then, choose the icon under **Condition** and then select **Formula**.
+23. Choose the **If condition** node. Then, choose the icon under **Condition** and then select **Formula**.
 
 ![](../screenshots/Picture101.png)
 
-25. Click the Formula Bar.
+24. Click the Formula Bar.
 
 ![](../screenshots/Picture102.png)
 
-26. Paste the formula below and save it. This formula will check if **BPData1** has any result or not. If there is no result, that means there is no Business Partner around based on the given Latitude, Longitude and Radius.
+25. Paste the formula below and save it. This formula will check if **BPData1** has any result or not. If there is no result, that means there is no Business Partner around based on the given Latitude, Longitude and Radius.
 
 ~~~
 IS_EMPTY(data.BPData1.d.results)
@@ -119,7 +115,7 @@ IS_EMPTY(data.BPData1.d.results)
 
 ![](../screenshots/Picture103.png)
 
-27. Select the **Alert** component and paste the message below to the **Dialog title** field. This dialog will be shown to the end user if there is no data in the **BPData1** data variable.
+26. Select the **Alert** component and paste the message below to the **Dialog title** field. This dialog will be shown to the end user if there is no data in the **BPData1** data variable.
 
 ~~~
 No Business Partner can be listed within the given range. Radius is set to maximum to list all Business Partners
@@ -127,15 +123,15 @@ No Business Partner can be listed within the given range. Radius is set to maxim
 
 ![](../screenshots/Picture104.png)
 
-28. Choose **Set page variable** and then choose the variable field under **Variable name**.
+27. Choose **Set page variable** and then choose the variable field under **Variable name**.
 
 ![](../screenshots/Picture105.png)
 
-29. Select the variable: **SelectedRadius** and then choose **Save**.
+28. Select the variable: **SelectedRadius** and then choose **Save**.
 
 ![](../screenshots/Picture106.png)
 
-30. Add the value **9999** to the **Assigned value**. Save your project.
+29. Add the value **9999** to the **Assigned value**. Save your project.
 
 ![](../screenshots/Picture107.png)
 
