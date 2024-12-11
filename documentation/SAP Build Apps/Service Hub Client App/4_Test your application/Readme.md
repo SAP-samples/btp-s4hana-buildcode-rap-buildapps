@@ -20,7 +20,7 @@
 
 ![](../screenshots/Picture68.png)
 
-Now you've successfully tested your application. Alternatively you can build and deploy your application. See [Build and Deploy Web Applications](https://help.sap.com/docs/build-apps/service-guide/build-and-deploy-web-applications).
+Now you've successfully tested your application. Alternatively you can build and deploy the application. You can use web or mobile builds. Check [Build and Deploy Web Applications](https://help.sap.com/docs/build-apps/service-guide/build-and-deploy-web-applications) for more details.
 
 ## Next Step
 
