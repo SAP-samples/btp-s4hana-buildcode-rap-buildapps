@@ -29,295 +29,129 @@
 
 ![](../screenshots/Picture113.png)
 
-7. Select the incident **Title** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture114.png)
-
-8. Paste the following formula and save it.
-
-~~~
-"Title: " + data.Incidents1.title
-~~~
-
-![](../screenshots/Picture115.png)
-
-9. Select the incident **Device** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture116.png)
-
-
-10. Paste the following formula and save it.
-
-~~~
-"Device: " + data.Incidents1.medicaldevice.description
-~~~
-
-
-![](../screenshots/Picture117.png)
-
-
-11. Select the incident **Status** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture118.png)
-
-
-12. Paste the following formula and save it.
-
-~~~
-"Status: " + data.Incidents1.status.description
-~~~
-
-![](../screenshots/Picture119.png)
-
-13. Select the **Priority** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture120.png)
-
-14. Paste the following formula and save it.
-
-~~~
-"Priority: " + data.Incidents1.urgency.description
-~~~
-
-![](../screenshots/Picture121.png)
-
-15. Select the **Created at** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture122.png)
-
-16. Paste the following formula and save it.
-
-~~~
-"Created at: " + data.Incidents1.createdAt
-~~~
-
-![](../screenshots/Picture123.png)
-
-17. Select the **Company** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture124.png)
-
-18. Paste the following formula and save it.
-
-~~~
-"Company: " + data.Incidents1.company
-~~~
-
-![](../screenshots/Picture125.png)
-
-19. Select the **Issue Description** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture126.png)
-
-20. Paste the following formula and save it.
-
-~~~
-"Issue Description: " + data.Incidents1.description
-~~~
-
-![](../screenshots/Picture127.png)
-
-21. Select the **Assigned Business Partner** component. Choose the button under the **Content** field.
-
-![](../screenshots/Picture128.png)
-
-22. Paste the following formula and save it.
-
-~~~
-"Assigned Business Partner: " + data.Incidents1.processor
-~~~
-
-![](../screenshots/Picture129.png)
-
-23. Select the drop-down component. Choose the button under the **Content** field.
+7. Select the drop-down component. Choose the button under the **Option List** field.
 
 ![](../screenshots/Picture130.png)
 
-24. Paste the following formula and save it.
+8. Paste the following formula and save it.
 
-~~~
+~~~js
 MAP(data.BPData1.d.results, {label: item.PartnerName+ " " + "    -    " + item.Distance + " km away", value:item.PartnerName})
 ~~~
 
 ![](../screenshots/Picture131.png)
 
-25. Select the button **Set Status: In Progress**. Open the **Logic Editor** tab.
+9. Select the map component. Choose the button under the **Markers to render** field.
+
+![](../screenshots/Picture200.png)
+
+10. Paste the following formula and save it.
+
+~~~js
+CONCAT(MAP(data.BPData1.d.results, {iconName: {set: "fiori", name: "flag"}, iconSize: 20, latitude: NUMBER(item.Latitude), iconColor: "#0010cf", labelFont: "72", longitude: NUMBER(item.Longitude), calloutTitle: item.Partner, calloutDescription: item.PartnerName}), [{iconName: {set: "fiori", name: "flag"}, iconSize: 20, latitude: NUMBER(data.Incidents1.latitude), iconColor: "#dd0000", labelFont: "72", longitude: NUMBER(data.Incidents1.longitude), calloutTitle: "Current Incident", calloutDescription: data.Incidents1.title}])
+~~~
+
+![](../screenshots/Picture201.png)
+
+> The formula can look complicated from the first view. But basically it's simple as following: it concatenates two arrays with the geo markers information. One array is made of the information from ABAP RAP service being called every time the user changes the search radius field. And another array is one item array with the incident data (to show the marker where the incident has happened).
+
+11. Select the button **Set Status: In Progress**. Open the **Logic Editor** tab.
 
 ![](../screenshots/Picture132.png)
 
-26. Select the **Update record logic** component. Choose the **X** button under **Resource name**. 
+12. Double click on the custom flow function **Set status button clicked**. 
+
+![](../screenshots/Picture132a.png)
+
+13. Select the **Update record** logic component. Choose the **X** button under **Resource name** and then choose **Data Entity**. 
 
 ![](../screenshots/Picture133.png)
 
-27. Select **Incidents** and choose **Save**.
+14. Select **Incidents** and choose **Save**.
 
 ![](../screenshots/Picture134.png)
 
-28. Choose the **ABC** icon under **ID**. Follow the path **Data and Variables** > **Page parameter**.
+15. Choose the **ABC** icon under **ID**. Follow the path **Data and Variables** > **Page parameter**.
 
 > As the record will be updated in the **Incidents** data entity, you need to provide the ID of the single record that will be updated.
 
 ![](../screenshots/Picture135.png)
 
-29. Select **IncidentID** and then choose **Save**.
+16. Select **IncidentID** and then choose **Save**.
 
 ![](../screenshots/Picture136.png)
 
-30. Choose **Custom object** under the **Record** field.
+17. Choose **Custom object** under the **Record** field.
 
 ![](../screenshots/Picture137.png)
 
-31. Choose the **X** button under **processor**. Follow the path **Data and Variables** > **Page variable**.
+18. Choose the **X** button under **processor**. Follow the path **Data and Variables** > **Page variable**.
 
 ![](../screenshots/Picture138.png)
 
-32. Select **SelectedPartner** and then choose **Save**.
+19. Select **SelectedPartner** and then choose **Save**.
 
 > Here, when the Service Admin assigns a Business Partner, this info will be saved to SelectedPartner page variable. So, we will be using this page variable to update the record for processor  
 
 ![](../screenshots/Picture139.png)
 
-33. Choose the **X** button under **status_code**. Then choose **Static Text**.
+20. Choose the **X** button under **status_code**.
 
 ![](../screenshots/Picture140.png)
 
-34. Type **A**.
+21. Choose **Flow function input**.
 
-> When the client creates a new incident from the client application, the incident will have the value "N" that corresponds to **New**. Now, when the Service Admin assigns a Business Partner and sets the status to **In Progress**, the status code will be "A" that corresponds to **Assigned**.
+![](../screenshots/Picture140a.png)
 
-![](../screenshots/Picture141.png)
+22. Choose **Set status button clicked** and then choose **Status**. Then save the binding.
 
-35. Choose the **X** button under **urgency_code**. Follow the path **Data and Variables** > **Page variable**.
+![](../screenshots/Picture140b.png)
+
+> The same flow function is called on both buttons: **Set Status: In Progress** and **Set Status: Closed**. During the flow function call the necessary status is passed. Then you use it as shown above.
+
+23. Choose the **X** button under **urgency_code**. Follow the path **Data and Variables** > **Page variable**.
 
 ![](../screenshots/Picture142.png)
 
-36. Select **SelectedUrgency** and then choose **Save**.
+24. Select **SelectedUrgency** and then choose **Save**.
 
 > When the client creates a new incident from the client application, the client will select one of the urgency level: Low, Medium or High. And in this admin application, the Service Admin will be able to change this urgency level if it is needed. If the admin changes it, this information will be saved under the page variable **SelectedUrgency**. So, you will be using this page variable to update the record for urgency. 
 
 ![](../screenshots/Picture143.png)
 
-37. Save the object.
+25. Save the object.
 
 ![](../screenshots/Picture144.png)
 
-38. Select the **Create record** node and then choose the **X** button under **Resource name**.
+26. Select the **Create record** node and then choose the **X** button under **Resource name**. Then choose **Data entity**.
 
 ![](../screenshots/Picture145.png)
 
-39. Select the **Conversation** data entity and then choose **Save**.
+27. Select the **Conversation** data entity and then choose **Save**.
 
 > All the incident conversations will be saved under this data entity.
 
 ![](../screenshots/Picture146.png)
 
-40. Choose the **{}** icon under **record**. Then choose **Formula**.
+28. Choose the **{}** icon under **record**. Then choose **Formula**.
 
 ![](../screenshots/Picture147.png)
 
-41. Paste the following formula and save it.
+29. Paste the following formula and save it.
 
 > This formula assigns the **IncidentID** page parameter to the **incident_ID** data field in the **Conversation** data entity. And then, it saves the message of the admin to the respective data field. 
 
-~~~
+~~~js
 {"incident_ID": params.IncidentID, message: pageVars.Message}
 ~~~
 
 ![](../screenshots/Picture148.png)
 
-42. Drag and drop the **Hide Spinner** and **Alert** components to the error node of the **Update Record** component.
+30. Save the changes in the function flow by selecting **Advanced** > **Overwrite local template**. Then choose **Exit isolation**.
 
-![](../screenshots/Picture193.png)
+![](../screenshots/Picture202.png)
 
-43. Choose the **Alert** component and then choose the **ABC** icon under **Dialog title** and follow the path: **Output value of another node** > **Update Record**.
-
-![](../screenshots/Picture194.png)
-
-44. Choose **Error** and then choose **Save**.
-
-![](../screenshots/Picture195.png)
-
-45. Choose **Set Status: Closed**. Choose the **Update record** node and then choose the **X** button under **Resource name**.
-
-![](../screenshots/Picture149.png)
-
-46. Choose **Incidents** and then choose **Save**.
-
-![](../screenshots/Picture150.png)
-
-47. Choose the **ABC** icon under **ID**. Follow the path **Data and Variables** > **Page parameter**.
-
-> As the record will be updated in **Incidents** data entity, you need to provide the ID of the single record that will be updated.
-
-![](../screenshots/Picture151.png)
-
-48. Choose **IncidentID** and then choose **Save**.
-
-![](../screenshots/Picture152.png)
-
-49. Choose **Custom object** under **Record**.
-
-![](../screenshots/Picture153.png)
-
-50. Choose the **X** button under **processor**. Follow the path **Data and Variables** > **Page variable**.
-
-![](../screenshots/Picture154.png)
-
-51. Choose **SelectedPartner** and then choose **Save**.
-
-> Here, when the Service Admin assigns a Business Partner, this info will be saved to **SelectedPartner** page variable. So, you will be using this page variable to update the record for the processor.
-
-![](../screenshots/Picture155.png)
-
-52. Choose the **X** button under **status_code**. Then choose **Static Value**.
-
-![](../screenshots/Picture156.png)
-
-53. Type **C**.
-
-> When the client creates a new incident from the client application, the incident will have the value "O" that corresponds to **Open**. Now, when the Service Admin assigns a Business Partner and sets the status to **Closed**, the status code will be "C".
-
-![](../screenshots/Picture157.png)
-
-54. Choose the **X** button under **urgency_code**. Follow the path **Data and Variables** > **Page variable**.
-
-![](../screenshots/Picture158.png)
-
-55. Choose **SelectedUrgency** and then choose **Save**.
-
-> When the client creates a new incident from the client application, the client will select one of the urgency levels: Low, Medium or High. And in this admin application, the Service Admin will be able to change this urgency level if it is needed. If the admin changes it, this information will be saved under the page variable SelectedUrgency. So, you will be using this page variable to update the record for urgency. 
-
-![](../screenshots/Picture159.png)
-
-56. Save the object.
-
-![](../screenshots/Picture160.png)
-
-57. Select the **Create record** node and choose the **X** button under **Resource name**.
-
-![](../screenshots/Picture161.png)
-
-58. Select the **Conversation** data entity and then choose **Save**.
-
-> All the conversations will be saved under this data entity.
-
-![](../screenshots/Picture162.png)
-
-59. Choose the **{}** icon under **record**. Then choose **Formula**.
-
-![](../screenshots/Picture163.png)
-
-60. Paste the following formula and save it.
-
-> This formula assigns the **IncidentID** page parameter to the **incident_ID** data field in the **Conversation** data entity. And then, it saves the message of the admin to the respective data field. 
-
-~~~
-{"incident_ID": params.IncidentID, message: pageVars.Message}
-~~~
-
-![](../screenshots/Picture164.png)
-
-61. Choose **Conversation Main Container**. Click the formula field under **Advanced properties**.
+31. Choose **Conversation Main Container**. Click the formula field under **Advanced properties**.
 
 > If the SAP Build Apps project has many UI components, it will be easier to select them using UI Component tree. So this is how you have just selected the Conversation Main Container.
 
@@ -325,7 +159,7 @@ MAP(data.BPData1.d.results, {label: item.PartnerName+ " " + "    -    " + item.D
 
 ![](../screenshots/Picture165.png)
 
-62. Paste the following formula and save it.
+32. Paste the following formula and save it.
 
 > This formula checks if the **Conversation1** data variable is empty.
 
@@ -339,42 +173,27 @@ NOT(IS_EMPTY(data.Conversation1))
 
 ![](../screenshots/Picture166.png)
 
-63. Select **Record of Conversation** using the component tree. Then, follow the path **Repeat with** > **Data and Variables** > **Data variable**.
+33. Select **Record of Conversation** using the component tree. Then, follow the path **Repeat with** > **Data and Variables** > **Data variable**.
 
 ![](../screenshots/Picture167.png)
 
-64. Select **Conversation1** and then choose **Save**.
+34. Select **Conversation1** and then choose **Save**.
 
 ![](../screenshots/Picture168.png)
 
-65. Select **Text 11** component using the component tree. Then, choose the **ABC** icon under **Content**.
+35. Select **Text 11** component using the component tree. Then, choose the **ABC** icon under **Content**.
 
 ![](../screenshots/Picture169.png)
 
-66. Select the **Data item in repeat** option.
+36. Select the **Data item in repeat** option.
 
 ![](../screenshots/Picture170.png)
 
-67. Select **message** under **current** and then choose **Save**.
+37. Select **message** under **current** and then choose **Save**.
 
 ![](../screenshots/Picture171.png)
 
-68. Drag and drop the **Hide Spinner** and **Alert** components to the error node of the **Update Record** component.
-
-![](../screenshots/Picture196.png)
-
-69. Select the **Alert** component and then choose the **ABC** icon under **Dialog title** and follow the path: **Output value of another node** > **Update Record**.
-
-![](../screenshots/Picture197.png)
-
-70. Select **Error** and then choose **Save**.
-
-![](../screenshots/Picture198.png)
-
-71. Save your project.
-
-![](../screenshots/Picture172.png)
-
+38. Save your project.
 
 You have successfully completed the application! 
 

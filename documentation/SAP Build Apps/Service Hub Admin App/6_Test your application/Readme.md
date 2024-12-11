@@ -1,8 +1,8 @@
 # Test Your Application
 
-1. Go to the **Launch** tab and then choose **Open preview portal**.
+1. Choose **Preview** on the top tab of the application.
 
-![](../screenshots/Picture173.png)
+![](../screenshots/Picture203.png)
 
 2. Choose **Open web preview**.
 
