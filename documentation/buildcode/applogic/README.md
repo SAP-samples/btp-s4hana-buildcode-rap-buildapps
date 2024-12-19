@@ -25,7 +25,7 @@ You have already created the data model, service, and sample data with Joule. No
 6. Copy the following prompt at the Joule's pane and then choose **Send**.
 
 ```
-Write a validation, that if someone tries to update the incident with status equal to closed ('C'), then throw an error "Can't modify a closed incident".
+Write a validation, that if someone tries to update the incident with status equal to closed ('C'), then throw an error "Can't modify a closed incident".
 ```
 
   ![](./images/generate.png)
