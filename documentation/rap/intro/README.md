@@ -12,6 +12,8 @@ To start this part of the scenario, you need a subaccount in SAP BTP with the SA
 
 Alternatively, you can use your own subaccount. Make sure that you have the necessary quotas and subscriptions. See [Getting Started in the ABAP Environment](https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/getting-started-in-abap-environment).
 
+> Make sure that your user has a developer role (`SAP_BR_DEVELOPER`) to access the system via ABAP Development tools. If you used a booster to create the ABAP Environment, then the role was automatically granted. Otherwise see details [here](https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/creation-of-developer-users).
+
 ## 2. Create an ABAP Project
 
 After your subaccount is ready, you have to prepare your workspace in the ABAP Development Tools. See the [Create an ABAP Cloud Project](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html) tutorial.
