@@ -1,6 +1,6 @@
 # Create Application Logic with Joule
 
-You have already created the data model, service, and sample data with Joule. Now, you want to create some logic for your service. The goal is to prevent the change of the incident with the status *Closed*.
+You have already created the data model, service, and initial/sample data with Joule. Now, you want to create some logic for your service. The goal is to prevent the change of the incident with the status *Closed*.
 
 1. In the **Storyboard** tab, choose the **Incidents** entity under **Services**, and then choose **Open in Graphical Modeler**.
 

@@ -1,6 +1,6 @@
 # Enhance the Sample Data Using Joule
 
-Joule created the CAP data model and the OData service. In addition, Joule created some sample data by default. Now, ask Joule to provide additional sample data.
+Joule created the CAP data model and the OData service. Now, ask Joule to provide additional sample data.
 
 1. Choose **Joule** > **/cap-gen-data Generate CAP sample data**.
 
@@ -17,6 +17,10 @@ Generate sample data with at least 5 incidents and 5 devices for medical equipme
 3. Accept the generated data. This will add the data in all entities.
 
   ![](./images/acceptdata.png)
+
+4. Choose **Open Data Editor** button.
+
+  ![](./images/open-data-editor.png)
 
 4. Open the **Medicaldevice** entity. You will notice how AI-powered Joule returns a perfect medical equipment.
 

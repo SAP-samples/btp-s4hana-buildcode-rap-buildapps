@@ -38,7 +38,7 @@ To display and test the content you have created for the Equipment Maintenance a
 
   ![](./images/incidentdata.png)
 
-10. You can also see the service for all the entities as well. This is the snapshot for **Medicaldevic** service:
+10. You can also see the service for all the entities as well. This is the snapshot for **Medicaldevice** service:
 
   ![](./images/medical.png)
 
