@@ -25,29 +25,27 @@ Thanks to SAP Build Code, you can:
 
   ![](./images/create.png)
 
-2. Choose the **Build an Application** tile.
+2. Choose the **Application** tile.
 
   ![](./images/buildapp.png)
 
-3. Choose the **SAP Build Code** tile to develop your project in SAP Business Application Studio, the SAP Build Code development environment, leveraging the capabilities of the services included in SAP Build Code.
-
-  ![](./images/buildcode.png)
-
-4. Choose the **Full-Stack Application** tile. 
+3. Choose the **Full-Stack** tile. 
 
   ![](./images/fullstack.png) 
 
-5. In **Project Name** field, enter **equipmentmaintenance**.
+4. On the next screen choose **Full-Stack Node.JS** type and then choose **Next**.
 
-6. Select the dev space where you want the project to reside.
+  ![](./images/buildcode.png)
 
-7. Choose **Create**.
+5. In **Project Name** field, enter **equipmentmaintenance**. Select the dev space where you want the project to reside. Then choose **Review**.
 
   ![](./images/projectinfo.png)
 
+6. On the next screen just choose **Create**.
+
 > You can see the project being created in the **All Projects** table of the lobby.
 
-8. After you see a message stating that the project has been created successfully, choose the project to open it.
+7. After you see a status of your project stating that the project has been created successfully, choose the project to open it.
 
   ![](./images/projectopen.png)
 

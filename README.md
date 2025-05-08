@@ -13,7 +13,7 @@ This scenario showcases the integration of a mobile application developed using 
 
 The tutorial focuses on building **Fusion Application** on where professional and citizen developers come together. The following aspects are:
 
-1. Build and deploy a full-stack application using [SAP Build Code with Joule](https://www.sap.com/india/products/technology-platform/developer-tools.html)
+1. Build and deploy a full-stack application using [SAP Build Code with Joule](https://www.sap.com/products/technology-platform/developer-tools.html)
 
 ![](./documentation/images/joule.png)
 

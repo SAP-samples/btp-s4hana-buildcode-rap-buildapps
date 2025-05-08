@@ -8,23 +8,23 @@ In the Equipment Maintenance application, we will remove ID for both **Status** 
 
   ![](./images/statusopen.png)
 
-3. Select the header of the entity and then choose **Show Details** icon.
+3. Select the header of the entity and then choose **Include Aspects** icon.
+
+  ![](./images/include-aspects.png)
+
+4. Uncheck the **cuid** checkbox. It will remove the **ID** key field from the entity.
+
+  ![](./images/exclude-cuid-aspect.png)
+
+5. Select the header of the entity again and then choose **Show Details** icon.
 
   ![](./images/status-details.png)
 
-4. In the right pane select the **Aspects** tab and then uncheck the **cuid** checkbox. It will remove the **ID** key field from the entity.
-
-  ![](./images/status-remove-aspect.png)
-
-5. In the entity choose the **code** field and in the right pane choose **Yes** against the **Key Properties** option. This will make the code as key field for the **Status** schema.
+6. On the right pane on the **Properties** tab check the **Key** checkbox for the **code** field. This will make the code as key field for the **Status** schema.
 
   ![](./images/codekey.png)
 
-6. Accept the changes with the **Save** button.
-
-  ![](./images/save-changes.png)
-
-Repeat the steps for the **Urgency** model as well. The final look of schema for both data models should look like this:
+Repeat the steps for the **Urgency** entity as well. The final look of schema for both data entities should look like this:
 
   ![](./images/both.png)
 

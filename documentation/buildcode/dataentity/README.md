@@ -1,6 +1,6 @@
 # Create Data Entities with Joule
 
-Let’s create an application for the Equipment Maintenance application.
+Let’s create the Equipment Maintenance full-stack application.
 
 > Note: Joule is a Generative AI assistant that will help you to create the code. The code might be different every time you trigger the prompt, so the examples shown in the tutorial might not be exactly the same as what you see in your system.
 
