@@ -8,7 +8,7 @@ Let’s create the Equipment Maintenance full-stack application.
 
 ![](./images/jouleclick.png)
 
-2. In the Joule tab select the **/cap-gen-app Generate a CAP application** option.
+2. In the Joule tab select the **/cap-gen-model Generate CAP Data Model** option.
 
 ![](./images/openjoule.png)
 
