@@ -6,6 +6,14 @@ The last step in SAP Build Code is to deploy the application in the SAP BTP, Clo
 
 To deploy the application in Cloud Foundry environment you should have a Cloud Foundry space in your subaccount. If you don't have it yet, follow this [documentation](https://help.sap.com/docs/btp/sap-business-technology-platform/creating-cloud-foundry-organization-and-space?version=Cloud).
 
+Make sure that you have the following [entitlements](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts):
+- **SAP HANA Cloud** - `hana` and `tools` service plans
+- **SAP HANA Schemas & HDI Containers** - `hdi-shared` plan
+- **Cloud Foundry** - `MEMORIES` plan
+- **Authorization and Trust Management Service** - `application` plan
+
+You have to be subscribed for SAP HANA Cloud tools application. More details can be found in the [Start Using SAP HANA Cloud Trial in SAP BTP Cockpit](https://developers.sap.com/tutorials/hana-cloud-mission-trial-2.html) tutorial (trial only).
+
 You should have an SAP HANA Cloud instance in your subaccount. See the [Provision an Instance of SAP HANA Cloud, SAP HANA Database](https://developers.sap.com/tutorials/hana-cloud-mission-trial-3.html) tutorial. 
 
 Remember that your [database instance should be available](https://help.sap.com/docs/hana-cloud/sap-hana-cloud-administration-guide/sap-hana-instance-mapping) from your Cloud Foundry space. You can do it during DB instance creation like shown here:
@@ -48,6 +56,8 @@ The Cloud Foundry Org Id can be found in the subaccount overview:
 > Most probably you will need to subscribe to SAP Build Work Zone to access the applications. Follow the documentation provided if you don't see the applications list (for example subscribe to SAP Build Workzone, standard edition).
 > 
 > ![](./images/workzone-docu-links.png)
+>
+> You can skip this step now and go to the *exercise 3* on this page.
 
   ![](./images/webapp.png)
 
