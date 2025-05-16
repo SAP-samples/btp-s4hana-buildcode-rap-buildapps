@@ -71,8 +71,6 @@ The geo data will be taken from the list of the biggest cities in the world for 
 
 ## 3. Create a Console Class
 
-> NOTE: You can ommit the steps from 1 to 8 if you have already cloned your code from the GIT repository.
-
 1. Right-click your **ZGEO** package name.
 
 2. Choose **New** &rarr; **Other ABAP Repository Object** in the context menu.

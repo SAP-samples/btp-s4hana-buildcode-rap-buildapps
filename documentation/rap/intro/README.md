@@ -14,17 +14,59 @@ Alternatively, you can use your own subaccount. Make sure that you have the nece
 
 > Make sure that your user has a developer role (`SAP_BR_DEVELOPER`) to access the system via ABAP Development tools. If you used a booster to create the ABAP Environment, then the role was automatically granted. Otherwise see details [here](https://help.sap.com/docs/sap-btp-abap-environment/abap-environment/creation-of-developer-users).
 
-## 2. Create an ABAP Project
+## 2. Prepare SAP Build Environment
 
-After your subaccount is ready, you have to prepare your workspace in the ABAP Development Tools. See the [Create an ABAP Cloud Project](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html) tutorial.
+After your subaccount is ready, you have to prepare your SAP Build environment to be able to create projects in the ABAP Environment instance. Follow the prerequisites section in [this documentation](https://help.sap.com/docs/build/sap-build-core/create-abap-cloud-project).
+
+For the trial system you don't have an option to manage the communication artifacts and users in ABAP Environment. That's why you will need to create a destination with your credentials (skip all other steps in the documentation above).
+
+  1. On the **Instances and Subscription** choose the service key for the service instance **ABAP Environment**.
+  
+  ![](./images/abap-service-key.png)
+
+  2. Copy the content of the key to some text editor. You will need it later to create destination. Then choose **Close**.
+
+  ![](./images/copy-key.png)
+
+  3. Open **Destinations** tab in your subaccount and then choose **Create Destination**.
+
+  ![](./images/create-destination.png)
+
+  4. Fill the following fields:
+
+  | **Parameter**           | **Value**                                                   |
+  | ----------------------- | ----------------------------------------------------------- |
+  | **Name**                | `build2abap`                                                |
+  | **Type**                | `HTTP`                                                      |
+  | **Description**         | `SAP Build to ABAP`                                         |
+  | **URL**                 | *Use **url** from the service key*                          |
+  | **Proxy Type**          | `Internet`                                                  |
+  | **Authentication**      | `OAuth2Password`                                            |
+  | **User**                | *your BTP Logon User Name*                                  |
+  | **Password**            | *your BTP Logon Password*                                   |
+  | **Client ID**           | *Use **uaa-clientid** from the service key*                 |
+  | **Client Secret**       | *Use **uaa-clientsecret** from the service key*             |
+  | **Token Service URL**   | *Use **uaa-url** from the service key. And add **/oauth/token** at the end of the URL* |
+
+  5. Add the following **Additional Properties**:
+
+  | **Property**                  | **Value**                                             |
+  | ----------------------------- | ----------------------------------------------------- |
+  | **abap_enabled**              | true                                                  |
+  | **HTML5.DynamicDestination**  | abap_true_destination                                 |
+  | **HTML5.Timeout**             | 60000                                                 |
+  | **WebIDEEnabled**             | true                                                  |
+  | **WebIDEUsage**               | odata_abap, dev_abap                                  |
+
+  ![](./images/ready-destination.png)
 
 ## Result
  
-You have prepared a subaccount in SAP BTP with the SAP BTP, ABAP Environment and created a workspace in the ABAP Development Tools. Now, you are ready to develop the API.
+You have prepared a subaccount in SAP BTP with the SAP BTP, ABAP Environment and prepared a SAP Build environment. Now, you are ready to develop the API.
 
 ## Next Step
 
-[Create Package](../package/README.md)
+[Create Project](../package/README.md)
 
 ## Reference Links
 

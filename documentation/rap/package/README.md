@@ -1,70 +1,68 @@
-# Create Package
+# Create Project
 
 ## Introduction
 
 To store and group the development objects for your API, you need to create an ABAP package. Optionally, you can get all the objects from a provided GIT repository and save some time for this tutorial. We recommend that you go through all the steps for a better understanding of the API creation.
 
-## 1. Create Package
+## Prerequisites
 
-To create a package, follow the [Create an ABAP Package](https://developers.sap.com/tutorials/abap-dev-create-package.html) tutorial. Use **ZGEO** as a name of the package and **ZLOCAL** as a superpackage.
+You have downloaded one of the latest milestones from the [Eclipse Foundation](https://help.sap.com/docs/link-disclaimer?site=https%3A%2F%2Fwww.eclipse.org%2Fdownloads%2Fpackages%2Frelease%2F2024-12) Web site and installed ADT from the customer update site. For more information, see [SAP Development Tools for Eclipse](https://tools.hana.ondemand.com/latest).
 
-## (OPTIONAL) 2. Clone the Repository
+## Create Project
 
-If you don't want to create all the objects of this tutorial manually, you can bypass most of the work by cloning the repository which we have provided for you. Unfortunately, you still need to do some steps manually as some of the object types are not supported by **abapGit**.
+  1. At the **Instances and Subscriptions** tab open **SAP Build Code** application to enter the *SAP Build* lobby.
 
-1. You need to have **abapGit** extension installed in your Eclipse environment. See [abapGit Repositories ADT Plug-In](https://eclipse.abapgit.org/updatesite/).
+  ![](./img/open-lobby.png)
 
-2. Choose **Window** &rarr; **Show View** &rarr; **Other...** from the Eclipse menu.
+  2. Choose **Create**.
 
-  ![Show view](img/window-show-other-view.png)
+  ![](./img/create-new-project.png)
 
-3. Choose **abapGit Repositories** under the **ABAP** folder and then choose **Open**.
+  3. Choose **Application** and then choose **Next**.
 
-  ![Open view](img/show-abap-git-repository.png)
+  ![](./img/create-application.png)
 
-4. Choose the Plus button in the **abapGit Repositories** tab to create a new repository.
+  4. Choose **Full-Stack** and then choose **Next**.
 
-  ![New repo](img/create-repo-button.png)
+  ![](./img/create-full-stack.png)
 
-5. Enter the following URL in the **URL** field and then choose **Next**.
+  5. Choose **Full-Stack ABAP** and then choose **Next**.
 
-~~~
-https://github.com/SAP-samples/btp-s4hana-buildcode-rap-buildapps
-~~~
+  ![](./img/full-stack-abap.png)
 
-  ![URL](img/repo-url.png)
+  6. Choose **build2abap** in the dropdown list of the **System** field. For the **Package** subgroup select **New** and enter **ZLOCAL** in the **Superpackage** field, **ZGEO** in the **Package** field and **Location of Business Partners** in the **Description** field. Then choose **Next**.
 
-6. Choose **ref/heads/rap-code** in the **Branch** field and enter **ZGEO** in the **Package** field. Then, choose **Pull after link** checkbox. Then choose **Next**.
+  ![](./img/new-package.png)
 
-  ![Repo details](img/repo-details.png)
+  7. If you are asked - create a new transport request with any description you want. Then choose **Next**.
 
-7. On the next screen, choose **Next**.
+  ![](./img/new-transport.png)
 
-  ![Full scan](img/repo-folder-logic.png)
+  8. Enter **zgeo** as the name of the project. Enter **GEO ABAP** in the **Description** field. Then choose **Review**.
 
-8. Select your transport (if applicable) and choose **Finish**.
+  ![](./img/project-data.png)
 
-9. The repository will be cloned to your new package. Wait until it's over.
+  9. Afterwards choose **Create**. You will have a popup asking you to open **SAP Development Tools for Eclipse**. Confirm it. Also confirm the next popup asking if it's allowed to handle the commands for Eclipse.
 
-10. As mentioned before, some of the objects cannot be stored in the abapGit repository. So, you need to follow the steps in the **Task 1** and **Task 2** of the chapter [Fill the test data](../fill-data/README.md) before you can activate the development objects.
+  10. A new ABAP Cloud Project will be created in the Eclipse IDE. Choose **Next** in the creation popup.
 
-11. In the line 44 ofthe  **ZCL_FILL_BUPA_TABLES** class, replace **{YOUR_API_KEY}** with the API key that you've got in the previous step.
+  ![](./img/new-project-in-eclipse.png)
 
-  ![Paste API Key](../fill-data/img/paste_api_key.png)
+  11. Choose **Open Logon Page in Browser**. You will have an additional tab in your browser. Follow the instructions there to log in.
 
-12. Choose **Activate inactive ABAP development objects**. Select all objects in the new window and choose **Activate**.
+  ![](./img/eclipse-logon.png)
 
-  ![Activate all](../common-images/activate-all-button.png)
+  12. Finally your Eclipse IDE will ask you for the name of the Cloud project. Enter **TRIAL_ENV** and then choose **Finish**.
 
-13. Publish the service as described in the **step 6** of the **Task 3** in [this chapter](../service/README.md). 
+  ![](./img/eclipse-project-name.png)
 
-14. Follow the steps in the **Task 4** of the chapter [Fill the test data](../fill-data/README.md).
+  13. Your new package **ZGEO** will be shown. 
 
-15. Now you can test the service as described [here](../test/README.md).
+  ![](./img/add-to-favorite.png)
 
 ## Result
 
-You have created a package to store all other artifacts. If you used the abapGit approach to get your development objects, you are done with this part of the scenario. Otherwise, follow the next tutorial.
+You have created a SAP Build project for ABAP. This enabled a new package to store all other artifacts. You can always open this package from SAP Build Lobby. Now you are ready to create data entities.
 
 ## Next Step
 
@@ -73,4 +71,4 @@ You have created a package to store all other artifacts. If you used the abapGit
 ## Reference Links
 
 - [ABAP Packages](https://help.sap.com/docs/ABAP_PLATFORM/c238d694b825421f940829321ffa326a/4ec14bab6e391014adc9fffe4e204223.html)
-- [Working with abapGit](https://help.sap.com/docs/btp/sap-business-technology-platform/working-with-abapgit)
+

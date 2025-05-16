@@ -72,7 +72,7 @@ CLASS zcl_geo_helper DEFINITION
       END OF ty_partner_distance,
       ty_partner_distance_tab TYPE TABLE OF ty_partner_distance.
 
-    CLASS-METHODS get_geo_point
+    CLASS-METHODS get_geo_point AMDP OPTIONS CDS SESSION CLIENT DEPENDENT
       IMPORTING
         VALUE(iv_latitude)  TYPE ty_coord
         VALUE(iv_longitude) TYPE ty_coord
@@ -81,7 +81,7 @@ CLASS zcl_geo_helper DEFINITION
       RAISING
         cx_amdp_execution_error.
 
-    CLASS-METHODS get_partners_around
+    CLASS-METHODS get_partners_around AMDP OPTIONS CDS SESSION CLIENT DEPENDENT
       IMPORTING
         VALUE(iv_latitude)  TYPE ty_coord
         VALUE(iv_longitude) TYPE ty_coord

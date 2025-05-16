@@ -1,7 +1,7 @@
 # Module 2 - RESTful ABAP Service
 
 1. [Introduction](./intro/README.md)
-2. [Create Package](./package/README.md)
+2. [Create Project](./package/README.md)
 3. [Create Database Tables](./tables/README.md)
 4. [Create Data Definition](./bo/README.md)
 5. [Create Business Object Projections](./projection/README.md)
