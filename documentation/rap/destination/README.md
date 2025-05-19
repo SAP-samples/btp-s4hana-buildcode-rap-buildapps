@@ -39,7 +39,7 @@ This tutorial shows how to connect to the ABAP environment that resides in the t
     - **Name** = **RAP-Geo**
     - **Type** = **HTTP**
     - **Description** = **RAP GEO Service**
-    - **URL** = base URL of the ABAP Environment found in the service key (field **url**) followed by **/sap/opu/odata/sap/ZAPI_GEO_O2**. Example: **https://xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx.abap.xx10.hana.ondemand.com/sap/opu/odata/sap/ZGEO_V2**
+    - **URL** = base URL of the ABAP Environment found in the service key (field **url**) followed by **/sap/opu/odata/sap/ZAPI_GEO_O2**. Example: **https://xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx.abap.xx10.hana.ondemand.com/sap/opu/odata/sap/ZAPI_GEO_O2**
       
       ![url](img/service-key-url.png)
 
